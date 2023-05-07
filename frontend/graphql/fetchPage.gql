@@ -1,0 +1,13 @@
+query fetchPage($uri: ID!) {
+  page(id: $uri, idType: URI) {
+    id
+    title
+    content
+    featuredImage {
+      node {
+        altText
+        sourceUrl
+      }
+    }
+  }
+}
