@@ -2,6 +2,7 @@
   <div>
     <div v-if="data?.page">
       <h1>{{ data.page.title }}</h1>
+      <h2>{{ $t('test') }}</h2>
       <nuxt-img
         v-if="data?.page?.featuredImage?.node"
         class="w-full"
@@ -12,7 +13,12 @@
         placeholder
         @load="loaded = true"
       />
-      <div v-html="data.page.content"></div>
+      <div v-html="data.page.content" />
+      <div v-for="translation in data.page.translations" :key="translation.id">
+        <nuxt-link :to="translation.uri">
+          {{ translation.language.code }}
+        </nuxt-link>
+      </div>
     </div>
   </div>
 </template>
@@ -22,23 +28,23 @@ export default {
   data() {
     return {
       loaded: false,
-    };
+    }
   },
-};
+}
 </script>
 
 <script setup>
-import fetchPage from "~/graphql/fetchPage.gql";
+import fetchPage from '~/graphql/fetchPage.gql'
 
-const route = useRoute();
+const route = useRoute()
 
-const variables = { uri: route.params.uri };
+const variables = { uri: route.params.uri }
 
-const { data } = await useAsyncQuery(fetchPage, variables);
+const { data } = await useAsyncQuery(fetchPage, variables)
 
 useHead({
-  title: "home",
-});
+  title: 'home',
+})
 </script>
 
 <style scoped lang="postcss">

@@ -9,5 +9,13 @@ query fetchPage($uri: ID!) {
         sourceUrl
       }
     }
+    translations {
+      id
+      uri
+      language {
+        id
+        code
+      }
+    }
   }
 }

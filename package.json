@@ -1,0 +1,23 @@
+{
+  "name": "ecolecouture.ch",
+  "version": "0.0.0",
+  "description": "Mono repo project for the website ecolecouture.ch. Using wordpress headless and nuxt.",
+  "scripts": {
+    "prepare": "husky install",
+    "lint": "yarn lint:frontend",
+    "lint:frontend": "cd frontend && yarn lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jminguely/ecolecouture.ch.git"
+  },
+  "author": "Julien Minguely",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jminguely/ecolecouture.ch/issues"
+  },
+  "homepage": "https://github.com/jminguely/ecolecouture.ch#readme",
+  "devDependencies": {
+    "husky": "^8.0.3"
+  }
+}
