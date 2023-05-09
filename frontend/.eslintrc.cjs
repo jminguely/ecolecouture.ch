@@ -17,5 +17,6 @@ module.exports = {
     'selector-anb-no-unmatchable': 0,
     'vue/multi-word-component-names': 0,
     'vue/max-attributes-per-line': 'off',
+    'vue/singleline-html-element-content-newline': 'off',
   },
 }

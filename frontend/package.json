@@ -38,6 +38,8 @@
   },
   "dependencies": {
     "@apollo/client": "^3.7.12",
-    "@babel/eslint-parser": "^7.21.8"
+    "@babel/eslint-parser": "^7.21.8",
+    "@pinia/nuxt": "^0.4.10",
+    "pinia": "^2.0.36"
   }
 }

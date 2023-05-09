@@ -1,7 +1,12 @@
 import eslintPlugin from 'vite-plugin-eslint'
 
 export default defineNuxtConfig({
-  modules: ['@nuxtjs/apollo', '@nuxt/image-edge', '@nuxtjs/i18n'],
+  modules: [
+    '@nuxtjs/apollo',
+    '@nuxt/image-edge',
+    '@nuxtjs/i18n',
+    '@pinia/nuxt',
+  ],
 
   buildModules: ['@nuxtjs/google-fonts'],
 

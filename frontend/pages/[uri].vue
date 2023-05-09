@@ -34,6 +34,7 @@ export default {
 </script>
 
 <script setup>
+import { useCounterStore } from '@/stores/counter'
 import fetchPage from '~/graphql/fetchPage.gql'
 
 const route = useRoute()
@@ -41,6 +42,10 @@ const route = useRoute()
 const variables = { uri: route.params.uri }
 
 const { data } = await useAsyncQuery(fetchPage, variables)
+
+const store = useCounterStore()
+const { increment } = store
+increment('bar')
 
 useHead({
   title: 'home',
