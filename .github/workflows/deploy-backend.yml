@@ -13,16 +13,16 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./worpress
+        working-directory: ./wordpress
 
     steps:
       - uses: actions/checkout@v3
 
       - name: 🔗 Creates symlink
         run: |
-          ln -s /api.ecolecouture.ch/shared/web/app/uploads ./wordpress/web/app/uploads
-          ln -s /api.ecolecouture.ch/shared/web/.htaccess ./wordpress/web/.htaccess
-          ln -s /api.ecolecouture.ch/shared/.env ./wordpress/.env
+          ln -s /api.ecolecouture.ch/shared/web/app/uploads ./web/app/uploads
+          ln -s /api.ecolecouture.ch/shared/web/.htaccess ./web/.htaccess
+          ln -s /api.ecolecouture.ch/shared/.env ./.env
 
       - name: 🚀 Ship the whole thin
         id: deploy
