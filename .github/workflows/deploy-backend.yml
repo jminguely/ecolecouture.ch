@@ -1,0 +1,36 @@
+name: Deploy backend
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/deploy-backend.yml
+      - wordpress/**
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./worpress
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: 🔗 Creates symlink
+        run: |
+          ln -s /api.ecolecouture.ch/shared/web/app/uploads ./web/wordpress/app/uploads
+          ln -s /api.ecolecouture.ch/shared/web/.htaccess ./web/wordpress/.htaccess
+
+      - name: 🚀 Ship the whole thin
+        id: deploy
+        uses: Pendect/action-rsyncer@v2.0.0
+        env:
+          DEPLOY_KEY: ${{secrets.DEPLOY_KEY}}
+        with:
+          flags: '-avzrl --delete'
+          options: ''
+          ssh_options: ''
+          src: './wordpress'
+          dest: ${{vars.DEPLOY_DEST}}
