@@ -20,8 +20,9 @@ jobs:
 
       - name: 🔗 Creates symlink
         run: |
-          ln -s /api.ecolecouture.ch/shared/web/app/uploads ./web/wordpress/app/uploads
-          ln -s /api.ecolecouture.ch/shared/web/.htaccess ./web/wordpress/.htaccess
+          ln -s /api.ecolecouture.ch/shared/web/app/uploads ./wordpress/web/app/uploads
+          ln -s /api.ecolecouture.ch/shared/web/.htaccess ./wordpress/web/.htaccess
+          ln -s /api.ecolecouture.ch/shared/.env ./wordpress/.env
 
       - name: 🚀 Ship the whole thin
         id: deploy
@@ -31,6 +32,6 @@ jobs:
         with:
           flags: '-avzrl --delete'
           options: ''
-          ssh_options: ''
+          ssh_options: '-p 2121'
           src: './wordpress'
           dest: ${{vars.DEPLOY_DEST}}
