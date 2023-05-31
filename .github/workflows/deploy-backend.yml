@@ -18,6 +18,11 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: Install dependencies
+        uses: php-actions/composer@v6
+        with:
+          php_version: '7.4'
+
       - name: 🔗 Creates symlink
         run: |
           ln -s /api.ecolecouture.ch/shared/web/app/uploads ./web/app/uploads
