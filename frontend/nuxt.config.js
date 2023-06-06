@@ -34,7 +34,7 @@ export default defineNuxtConfig({
   apollo: {
     clients: {
       default: {
-        httpEndpoint: 'http://api.ecolecouture.test/wp/graphql',
+        httpEndpoint: process.env.API_URL,
       },
     },
   },

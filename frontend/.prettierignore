@@ -3,5 +3,6 @@
 /tests/unit/coverage/**
 /cypress/
 /.nuxt/
+/.output/
 assets/content.scss
 /static/

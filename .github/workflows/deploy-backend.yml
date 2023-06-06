@@ -46,4 +46,4 @@ jobs:
           options: ''
           ssh_options: ''
           src: './wordpress'
-          dest: ${{vars.DEPLOY_DEST}}
+          dest: ${{vars.DEPLOY_DEST_BACKEND}}
