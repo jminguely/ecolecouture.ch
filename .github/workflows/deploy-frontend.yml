@@ -27,7 +27,7 @@ jobs:
       - name: 🧶 Yarn & Build the application
         run: yarn && yarn build
         env:
-          NODE_AUTH_TOKEN: ${{ vars.API_URL }}
+          API_URL: ${{ vars.API_URL }}
 
       - name: 🚀 Ship the whole thin
         id: deploy
