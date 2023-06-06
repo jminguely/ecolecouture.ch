@@ -1,6 +1,8 @@
 import eslintPlugin from 'vite-plugin-eslint'
 
 export default defineNuxtConfig({
+  ssr: false,
+
   modules: [
     '@nuxtjs/apollo',
     '@nuxt/image-edge',
