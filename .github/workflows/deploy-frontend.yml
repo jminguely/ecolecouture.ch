@@ -24,11 +24,10 @@ jobs:
           cache: 'yarn'
           cache-dependency-path: './frontend/yarn.lock'
 
-      - name: 🧶 Yarn this beauty
-        run: yarn
-
-      - name: ⚡️ Build the application
-        run: yarn build
+      - name: 🧶 Yarn & Build the application
+        run: yarn && yarn build
+        env:
+          NODE_AUTH_TOKEN: ${{ vars.API_URL }}
 
       - name: 🚀 Ship the whole thin
         id: deploy
