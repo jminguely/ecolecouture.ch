@@ -18,8 +18,8 @@ export default defineNuxtConfig({
     locale: 'fr',
     defaultLocale: 'fr',
     locales: [
-      { code: 'fr', iso: 'fr-CH' },
-      { code: 'de', iso: 'de-CH' },
+      { code: 'fr', iso: 'fr-CH', locale: 'fr_CH' },
+      { code: 'de', iso: 'de-CH', locale: 'de_CH' },
     ],
   },
 

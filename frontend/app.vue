@@ -1,18 +1,28 @@
 <template>
   <div class="site-wrapper" :class="{ menuOpen }">
-    <Sidebar :menu-open="menuOpen" @toggle-menu="toggleMenu" />
+    <Sidebar
+      :menu-open="menuOpen"
+      :available-translations="availableTranslations"
+      @toggle-menu="toggleMenu"
+    />
     <main class="site-main">
-      <NuxtPage />
+      <NuxtPage @update-translations="updateAvailableTranslations" />
     </main>
   </div>
 </template>
 
 <script setup>
 const menuOpen = ref(false)
+const availableTranslations = ref(() => [])
 
 function toggleMenu() {
   menuOpen.value = !menuOpen.value
   console.log(menuOpen.value)
+}
+
+function updateAvailableTranslations(translations) {
+  availableTranslations.value = translations
+  console.log(translations[0].uri)
 }
 
 useHead({

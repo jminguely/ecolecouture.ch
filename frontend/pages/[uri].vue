@@ -34,8 +34,12 @@ export default {
 </script>
 
 <script setup>
-import { useCounterStore } from '@/stores/counter'
+import { useLangStore } from '@/stores/lang'
 import fetchPage from '~/graphql/fetchPage.gql'
+
+const emit = defineEmits(['updateTranslations'])
+
+const store = useLangStore()
 
 const route = useRoute()
 
@@ -43,9 +47,12 @@ const variables = { uri: route.params.uri }
 
 const { data } = await useAsyncQuery(fetchPage, variables)
 
-const store = useCounterStore()
-const { increment } = store
-increment('bar')
+const { setAvailableTranslations } = store
+
+if (data?.value?.page?.translations?.length > 0) {
+  console.log('uriemit')
+  emit('updateTranslations', data.value.page.translations)
+}
 
 useHead({
   title: 'home',
