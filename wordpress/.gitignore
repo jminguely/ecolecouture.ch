@@ -26,3 +26,6 @@ log/
 
 # WP-CLI
 wp-cli.local.yml
+
+#ACF
+auth.json

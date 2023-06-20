@@ -4,17 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bbe3c6de7a3c9bcefc70d7dcfb45f82d",
+    "content-hash": "532a082039c3c74ee978e866c3af4860",
     "packages": [
-        {
-            "name": "advanced-custom-fields/advanced-custom-fields-pro",
-            "version": "6.1.6",
-            "dist": {
-                "type": "zip",
-                "url": "https://connect.advancedcustomfields.com/index.php?a=download&p=pro&k={%ACF_KEY}&t=6.1.6"
-            },
-            "type": "wordpress-plugin"
-        },
         {
             "name": "composer/installers",
             "version": "v2.2.0",
@@ -1299,6 +1290,21 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/wp-graphql/"
+        },
+        {
+            "name": "wpengine/advanced-custom-fields-pro",
+            "version": "6.1.6",
+            "dist": {
+                "type": "zip",
+                "url": "https://connect.advancedcustomfields.com/v2/plugins/composer_download?p=pro&t=6.1.6"
+            },
+            "require": {
+                "composer/installers": "~1.0 || ~2.0"
+            },
+            "replace": {
+                "wpackagist-plugin/advanced-custom-fields": "self.version"
+            },
+            "type": "wordpress-plugin"
         }
     ],
     "packages-dev": [
