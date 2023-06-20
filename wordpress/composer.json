@@ -37,7 +37,7 @@
           "type": "wordpress-plugin",
           "dist": {
               "type": "zip",
-              "url": "https://connect.advancedcustomfields.com/index.php?a=download&p=pro&k={%ACF_KEY}&t={%VERSION}"
+              "url": "https://connect.advancedcustomfields.com/index.php?a=download&p=pro&k={%ACF_KEY}&t=6.1.6"
           }
       }
     },
