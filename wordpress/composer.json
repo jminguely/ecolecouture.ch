@@ -60,7 +60,6 @@
     "roots/wordpress": "6.1.1",
     "roots/wp-config": "1.0.0",
     "roots/wp-password-bcrypt": "1.1.0",
-    "wpackagist-theme/twentytwentythree": "^1.0",
     "wpackagist-plugin/wp-graphql": "^1.14",
     "advanced-custom-fields/advanced-custom-fields-pro": "^6.1",
     "wp-graphql/wp-graphql-acf": "^0.6.1",
