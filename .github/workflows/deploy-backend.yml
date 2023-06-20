@@ -24,10 +24,11 @@ jobs:
       #     path: /tmp/composer-cache
       #     key: ${{ runner.os }}-${{ hashFiles('**/composer.lock') }}
 
+      - name: Add HTTP basic auth credentials for ACF
+        run: echo '${{ secrets.COMPOSER_AUTH_JSON }}' > $GITHUB_WORKSPACE/wordpress/auth.json
+
       - name: Install dependencies
         uses: php-actions/composer@v6
-        env:
-          ACF_KEY: ${{secrets.ACF_KEY}}
         with:
           php_version: '7.4'
           args: '--working-dir=./wordpress'
