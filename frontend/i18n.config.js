@@ -1,8 +1,8 @@
-import FR from './i18n/FR.json'
-import DE from './i18n/DE.json'
+import fr from './i18n/fr.json'
+import de from './i18n/de.json'
 
 export default defineI18nConfig(() => ({
   legacy: false,
   locale: 'FR',
-  messages: { FR, DE },
+  messages: { FR: fr, DE: de },
 }))
