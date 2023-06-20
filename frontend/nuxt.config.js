@@ -15,11 +15,11 @@ export default defineNuxtConfig({
   i18n: {
     vueI18n: './i18n.config.js',
     detectBrowserLanguage: false,
-    locale: 'fr',
-    defaultLocale: 'fr',
+    locale: 'FR',
+    defaultLocale: 'FR',
     locales: [
-      { code: 'fr', iso: 'fr-CH', locale: 'fr_CH' },
-      { code: 'de', iso: 'de-CH', locale: 'de_CH' },
+      { code: 'FR', iso: 'fr-CH', locale: 'fr_CH' },
+      { code: 'DE', iso: 'de-CH', locale: 'de_CH' },
     ],
   },
 

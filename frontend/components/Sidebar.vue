@@ -10,21 +10,19 @@
     <NuxtLink v-for="lang in navLocales" :key="lang.code" :to="lang.url">
       {{ lang.code }}
     </NuxtLink>
-    <p>Foo: {{ availableTranslations }}</p>
-    <p>Welcome: {{ $t('welcome') }}</p>
+    <p>StringWelcome: {{ $t('welcome') }}</p>
     <div class="sidebar">
-      <div class="md:block" :class="[menuOpen ? 'block' : 'hidden']">
-        <nuxt-link to="/"> Home </nuxt-link>
-        <nuxt-link to="/accueil"> Accueil </nuxt-link>
-        <nuxt-link to="/test"> Test </nuxt-link>
+      <div
+        class="nav-container md:block"
+        :class="[menuOpen ? 'block' : 'hidden']"
+      >
+        <Navigation />
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import { useLangStore } from '@/stores/lang'
-
 const props = defineProps({
   menuOpen: Boolean,
   availableTranslations: {
@@ -35,13 +33,11 @@ const props = defineProps({
 
 const emit = defineEmits(['toggleMenu'])
 
-const store = useLangStore()
+const { locales } = useI18n()
 
-const { locale, locales } = useI18n()
 const switchLocalePath = useSwitchLocalePath()
 
 const navLocales = computed(() => {
-  console.log('prop', props.availableTranslations)
   return locales.value.filter((i) => {
     i.url = switchLocalePath(i.code)
     if (props.availableTranslations.length > 0) {

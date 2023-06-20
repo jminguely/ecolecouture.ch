@@ -17,12 +17,10 @@ const availableTranslations = ref(() => [])
 
 function toggleMenu() {
   menuOpen.value = !menuOpen.value
-  console.log(menuOpen.value)
 }
 
 function updateAvailableTranslations(translations) {
   availableTranslations.value = translations
-  console.log(translations[0].uri)
 }
 
 useHead({

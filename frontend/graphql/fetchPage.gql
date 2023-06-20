@@ -3,6 +3,9 @@ query fetchPage($uri: ID!) {
     id
     title
     content
+    pageFields {
+      subtitle
+    }
     featuredImage {
       node {
         altText

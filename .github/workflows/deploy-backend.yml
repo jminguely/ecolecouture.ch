@@ -26,6 +26,8 @@ jobs:
 
       - name: Install dependencies
         uses: php-actions/composer@v6
+        env:
+          ACF_KEY: ${{secrets.ACF_KEY}}
         with:
           php_version: '7.4'
           args: '--working-dir=./wordpress'

@@ -1,8 +1,10 @@
 <template>
   <div>
     <div v-if="data?.page">
-      <h1>{{ data.page.title }}</h1>
-      <h2>{{ $t('test') }}</h2>
+      <h1 class="text-2xl">{{ data.page.title }}</h1>
+      <h2 v-if="data.page.pageFields.subtitle" class="text-xl">
+        {{ data.page.pageFields.subtitle }}
+      </h2>
       <nuxt-img
         v-if="data?.page?.featuredImage?.node"
         class="w-full"
@@ -14,11 +16,6 @@
         @load="loaded = true"
       />
       <div v-html="data.page.content" />
-      <div v-for="translation in data.page.translations" :key="translation.id">
-        <nuxt-link :to="translation.uri">
-          {{ translation.language.code }}
-        </nuxt-link>
-      </div>
     </div>
   </div>
 </template>
@@ -34,12 +31,9 @@ export default {
 </script>
 
 <script setup>
-import { useLangStore } from '@/stores/lang'
 import fetchPage from '~/graphql/fetchPage.gql'
 
 const emit = defineEmits(['updateTranslations'])
-
-const store = useLangStore()
 
 const route = useRoute()
 
@@ -47,10 +41,7 @@ const variables = { uri: route.params.uri }
 
 const { data } = await useAsyncQuery(fetchPage, variables)
 
-const { setAvailableTranslations } = store
-
 if (data?.value?.page?.translations?.length > 0) {
-  console.log('uriemit')
   emit('updateTranslations', data.value.page.translations)
 }
 
