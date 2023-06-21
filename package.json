@@ -1,6 +1,6 @@
 {
   "name": "ecolecouture.ch",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Mono repo project for the website ecolecouture.ch. Using wordpress headless and nuxt.",
   "scripts": {
     "prepare": "husky install",
