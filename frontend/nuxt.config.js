@@ -61,4 +61,9 @@ export default defineNuxtConfig({
   },
 
   components: true,
+
+  routeRules: {
+    '/': { redirect: '/accueil' },
+    '/de': { redirect: '/de/wilkommen' },
+  },
 })

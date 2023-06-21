@@ -1,6 +1,6 @@
 <template>
   <div class="site-wrapper" :class="{ menuOpen }">
-    <Sidebar
+    <Header
       :menu-open="menuOpen"
       :available-translations="availableTranslations"
       @toggle-menu="toggleMenu"
@@ -24,7 +24,7 @@ function updateAvailableTranslations(translations) {
 }
 
 useHead({
-  titleTemplate: (title) => `ecolecouture.ch - ${title}`,
+  titleTemplate: (title) => `${title} - ecolecouture.ch`,
   viewport: 'width=device-width, initial-scale=1, maximum-scale=1',
   charset: 'utf-8',
   bodyAttrs: {

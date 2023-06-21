@@ -41,13 +41,13 @@ const variables = { uri: route.params.uri }
 
 const { data } = await useAsyncQuery(fetchPage, variables)
 
+useHead({
+  title: data.value.page.title,
+})
+
 if (data?.value?.page?.translations?.length > 0) {
   emit('updateTranslations', data.value.page.translations)
 }
-
-useHead({
-  title: 'home',
-})
 </script>
 
 <style scoped lang="postcss">
