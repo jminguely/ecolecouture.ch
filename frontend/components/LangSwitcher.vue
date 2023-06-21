@@ -1,8 +1,13 @@
 <template>
   <nav>
-    <NuxtLink v-for="lang in navLocales" :key="lang.code" :to="lang.url">
-      {{ lang.code }}
-    </NuxtLink>
+    <ul>
+      <li v-for="lang in navLocales" :key="lang.code">
+        <NuxtLink v-if="lang.url" class="underline" :to="lang.url">
+          {{ lang.code }}
+        </NuxtLink>
+        <span v-else>{{ lang.code }}</span>
+      </li>
+    </ul>
   </nav>
 </template>
 
@@ -14,23 +19,21 @@ const props = defineProps({
   },
 })
 
-const { locales } = useI18n()
-
-const switchLocalePath = useSwitchLocalePath()
+const { locales, locale } = useI18n()
 
 const navLocales = computed(() => {
-  console.log('info', locales.value, props.availableTranslations)
-
   return locales.value.filter((i) => {
-    i.url = switchLocalePath(i.code)
+    i.url = i.homeUrl
     if (props.availableTranslations.length > 0) {
       props.availableTranslations.filter((j) => {
-        console.log(i.locale, j.language.locale)
         if (i.locale === j.language.locale) {
           i.url = j.uri
         }
         return j
       })
+    }
+    if (i.code === locale.value) {
+      i.url = false
     }
     return i
   })

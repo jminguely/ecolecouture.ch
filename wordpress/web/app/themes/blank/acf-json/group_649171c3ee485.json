@@ -1,50 +1,50 @@
 {
-    "key": "group_649171c3ee485",
-    "title": "Pages",
-    "fields": [
-        {
-            "key": "field_649171c467853",
-            "label": "Sous-titre",
-            "name": "subtitle",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "show_in_graphql": 1,
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        }
-    ],
-    "location": [
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "page"
-            }
-        ]
-    ],
-    "menu_order": 0,
-    "position": "normal",
-    "style": "default",
-    "label_placement": "top",
-    "instruction_placement": "label",
-    "hide_on_screen": "",
-    "active": true,
-    "description": "",
-    "show_in_rest": 0,
-    "show_in_graphql": 1,
-    "graphql_field_name": "pageFields",
-    "map_graphql_types_from_location_rules": 0,
-    "graphql_types": "",
-    "modified": 1687253484
+  "key": "group_649171c3ee485",
+  "title": "Pages",
+  "fields": [
+    {
+      "key": "field_649171c467853",
+      "label": "Sous-titre",
+      "name": "subtitle",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "show_in_graphql": 1,
+      "default_value": "",
+      "maxlength": "",
+      "placeholder": "",
+      "prepend": "",
+      "append": ""
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "post_type",
+        "operator": "==",
+        "value": "page"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": true,
+  "description": "",
+  "show_in_rest": 0,
+  "show_in_graphql": 1,
+  "graphql_field_name": "pageFields",
+  "map_graphql_types_from_location_rules": 0,
+  "graphql_types": "",
+  "modified": 1687253484
 }

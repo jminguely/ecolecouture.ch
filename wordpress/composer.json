@@ -30,8 +30,8 @@
   },
   "repositories": [
     {
-        "type":"composer",
-        "url":"https://connect.advancedcustomfields.com"
+      "type": "composer",
+      "url": "https://connect.advancedcustomfields.com"
     },
     {
       "type": "composer",

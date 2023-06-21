@@ -3,7 +3,7 @@
     <Header
       :menu-open="menuOpen"
       :available-translations="availableTranslations"
-      @toggle-menu="toggleMenu"
+      @update-menu-open="updateMenuOpen"
     />
     <main class="site-main">
       <NuxtPage @update-translations="updateAvailableTranslations" />
@@ -13,10 +13,10 @@
 
 <script setup>
 const menuOpen = ref(false)
-const availableTranslations = ref(() => [])
+const availableTranslations = ref([])
 
-function toggleMenu() {
-  menuOpen.value = !menuOpen.value
+function updateMenuOpen(val) {
+  menuOpen.value = val
 }
 
 function updateAvailableTranslations(translations) {
