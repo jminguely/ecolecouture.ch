@@ -16,8 +16,8 @@
         class="button button-shape-4 fixed top-0 right-0 m-5 bg-blue text-white hover:bg-blue-darker z-50"
         @click="emit('updateMenuOpen', !menuOpen)"
       >
-        <span v-if="menuOpen">Menu</span>
-        <span v-else>Close</span>
+        <span v-if="menuOpen">Close</span>
+        <span v-else>Menu</span>
       </button>
     </header>
     <!-- <p>StringWelcome: {{ $t('welcome') }}</p> -->

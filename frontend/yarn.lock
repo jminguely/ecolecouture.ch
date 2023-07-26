@@ -1385,6 +1385,11 @@
   dependencies:
     tslib "^2.3.0"
 
+"@ztrehagem/vue-accordion@^1.0.0-beta.1":
+  version "1.0.0-beta.1"
+  resolved "https://registry.yarnpkg.com/@ztrehagem/vue-accordion/-/vue-accordion-1.0.0-beta.1.tgz#41d9d01abf2c4278c445ad0f069df2828de4f1b6"
+  integrity sha512-3tX96KJeb+Lx8cWaE68UGRfMMf6did6hRVsUiapr5lqNYdJnqIDAwhyuaw3MwBVWvXgUN1tL+AhL5g0WU+ixag==
+
 abbrev@1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"

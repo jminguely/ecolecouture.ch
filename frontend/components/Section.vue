@@ -1,6 +1,10 @@
 <template>
   <div :class="`bg-${content.theme}`" class="p-8 section">
-    <div v-for="(row, i) in content.flexiblecontent" :key="i">
+    <div
+      v-for="(row, i) in content.flexiblecontent"
+      :key="i"
+      class="max-w-7xl mx-auto"
+    >
       <Title
         v-if="row.type == 'Page_Pagefields_sections_Flexiblecontent_Title'"
         :title="row.title"
@@ -17,6 +21,12 @@
         "
         :richtext="row.richtext"
       />
+      <Accordions
+        v-else-if="
+          row.type == 'Page_Pagefields_sections_Flexiblecontent_Accordions'
+        "
+        :accordions="row.accordions"
+      />
       <div v-else>{{ row }}</div>
     </div>
   </div>
@@ -26,6 +36,7 @@
 import Title from './FlexibleContent/Title.vue'
 import Buttons from './FlexibleContent/Buttons.vue'
 import Richtext from './FlexibleContent/Richtext.vue'
+import Accordions from './FlexibleContent/Accordions.vue'
 
 const props = defineProps({
   content: {
