@@ -39,8 +39,9 @@
   "dependencies": {
     "@apollo/client": "^3.7.12",
     "@babel/eslint-parser": "^7.21.8",
+    "@nuxtjs/i18n": "npm:@nuxtjs/i18n-edge",
     "@pinia/nuxt": "^0.4.11",
-    "pinia": "^2.1.4",
-    "@nuxtjs/i18n": "npm:@nuxtjs/i18n-edge"
+    "color": "^4.2.3",
+    "pinia": "^2.1.4"
   }
 }

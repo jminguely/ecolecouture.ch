@@ -1,5 +1,5 @@
 <template>
-  <nav class="main-navigation">
+  <nav class="main-navigation text-4xl">
     <ul>
       <li v-for="menuItem in menu.menuItems?.nodes" :key="menuItem.id">
         <nuxt-link v-if="menuItem.uri" class="underline" :to="menuItem.uri">
@@ -28,7 +28,7 @@ import fetchMenu from '~/graphql/fetchMenu.gql'
 
 const { locale } = useI18n()
 
-const variables = { lang: locale.value }
+const variables = { lang: locale.value, location: 'MENU_PRIMARY' }
 
 const { data } = await useAsyncQuery(fetchMenu, variables)
 
@@ -37,15 +37,10 @@ const menu = reactive({
 })
 
 watch(locale, async () => {
-  const variables = { lang: locale.value }
-  const { data } = await useAsyncQuery(fetchMenu, variables)
-  menu.menuItems = data.value.menuItems
+  setTimeout(async () => {
+    const variables = { lang: locale.value, location: 'MENU_PRIMARY' }
+    const { data } = await useAsyncQuery(fetchMenu, variables)
+    menu.menuItems = data.value.menuItems
+  }, 1000)
 })
 </script>
-
-<style lang="postcss" scoped>
-.main-navigation {
-  font-size: 32px;
-  margin-top: 100px;
-}
-</style>

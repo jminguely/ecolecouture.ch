@@ -1,0 +1,42 @@
+<template>
+  <div :class="`bg-${content.theme}`" class="p-8 section">
+    <div v-for="(row, i) in content.flexiblecontent" :key="i">
+      <Title
+        v-if="row.type == 'Page_Pagefields_sections_Flexiblecontent_Title'"
+        :title="row.title"
+      />
+      <Buttons
+        v-else-if="
+          row.type == 'Page_Pagefields_sections_Flexiblecontent_Buttons'
+        "
+        :buttons="row.buttons"
+      />
+      <Richtext
+        v-else-if="
+          row.type == 'Page_Pagefields_sections_Flexiblecontent_Richtext'
+        "
+        :richtext="row.richtext"
+      />
+      <div v-else>{{ row }}</div>
+    </div>
+  </div>
+</template>
+
+<script setup>
+import Title from './FlexibleContent/Title.vue'
+import Buttons from './FlexibleContent/Buttons.vue'
+import Richtext from './FlexibleContent/Richtext.vue'
+
+const props = defineProps({
+  content: {
+    type: Object,
+    required: true,
+  },
+})
+</script>
+
+<style lang="postcss" scoped>
+.section.bg-blue {
+  @apply text-white;
+}
+</style>

@@ -1,5 +1,7 @@
-query fetchMenu($lang: LanguageCodeFilterEnum) {
-  menuItems(where: { language: $lang, location: MENU_1, parentDatabaseId: 0 }) {
+query fetchMenu($lang: LanguageCodeFilterEnum, $location: MenuLocationEnum) {
+  menuItems(
+    where: { language: $lang, location: $location, parentDatabaseId: 0 }
+  ) {
     nodes {
       id
       label

@@ -4,12 +4,55 @@ query fetchPage($uri: ID!) {
     title
     content
     pageFields {
-      subtitle
-    }
-    featuredImage {
-      node {
-        altText
-        sourceUrl
+      sections {
+        theme
+        flexiblecontent {
+          type: __typename
+          ... on Page_Pagefields_sections_Flexiblecontent_Title {
+            title
+          }
+          ... on Page_Pagefields_sections_Flexiblecontent_Richtext {
+            richtext
+          }
+          ... on Page_Pagefields_sections_Flexiblecontent_Buttons {
+            buttons {
+              color
+              link {
+                target
+                title
+                url
+              }
+            }
+          }
+          ... on Page_Pagefields_sections_Flexiblecontent_Accordions {
+            accordions {
+              richtext
+              title
+            }
+          }
+          ... on Page_Pagefields_sections_Flexiblecontent_Slider {
+            images {
+              mediaDetails {
+                sizes(include: MEDIUM) {
+                  file
+                }
+              }
+            }
+          }
+          ... on Page_Pagefields_sections_Flexiblecontent_Testimonials {
+            testimonials {
+              text
+              title
+              image {
+                mediaDetails {
+                  sizes(include: MEDIUM) {
+                    file
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     }
     translations {
