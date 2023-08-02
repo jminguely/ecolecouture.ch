@@ -3,8 +3,8 @@
     <a
       v-for="(button, i) in buttons"
       :key="i"
-      class="button button-shape-1 bg-blue"
-      :class="`bg-${button.color}`"
+      class="button button-shape-1"
+      :class="`bg-${button.color} hover:bg-${button.color}-darker active:bg-${button.color}-lighter`"
       :href="button.link.url"
       :target="button.link.target"
     >
@@ -23,6 +23,7 @@ const props = defineProps({
 </script>
 
 <style lang="postcss" scoped>
+.button.bg-pink,
 .button.bg-blue {
   @apply text-white;
 }

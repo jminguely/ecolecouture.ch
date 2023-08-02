@@ -27,6 +27,18 @@
         "
         :accordions="row.accordions"
       />
+      <Slider
+        v-else-if="
+          row.type == 'Page_Pagefields_sections_Flexiblecontent_Slider'
+        "
+        :images="row.images"
+      />
+      <Testimonials
+        v-else-if="
+          row.type == 'Page_Pagefields_sections_Flexiblecontent_Testimonials'
+        "
+        :testimonials="row.testimonials"
+      />
       <div v-else>{{ row }}</div>
     </div>
   </div>
@@ -37,6 +49,8 @@ import Title from './FlexibleContent/Title.vue'
 import Buttons from './FlexibleContent/Buttons.vue'
 import Richtext from './FlexibleContent/Richtext.vue'
 import Accordions from './FlexibleContent/Accordions.vue'
+import Slider from './FlexibleContent/Slider.vue'
+import Testimonials from './FlexibleContent/Testimonials.vue'
 
 const props = defineProps({
   content: {

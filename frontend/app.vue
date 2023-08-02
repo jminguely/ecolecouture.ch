@@ -14,7 +14,7 @@
 </template>
 
 <script setup>
-import ButtonClippath from './components/ButtonTemplates.vue'
+import ButtonClippath from './components/ClipPathTemplates.vue'
 
 const menuOpen = ref(false)
 const availableTranslations = ref([])

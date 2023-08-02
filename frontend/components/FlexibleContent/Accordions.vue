@@ -7,14 +7,14 @@
       >
         {{ accordion.title }}
         <span
-          class="relative inline-block"
-          :class="[accordion.expanded ? ' rotate-180 top-1' : '-top-1']"
+          class="relative inline-block -top-0.5 left-1"
+          :class="[accordion.expanded && 'rotate-180']"
         >
-          ⌄
+          <img class="w-3" src="~/assets/img/icon-caret.svg" alt="" />
         </span>
       </button>
       <VueAccordion :expanded="accordion.expanded">
-        <div v-html="accordion.richtext"></div>
+        <div class="py-3 pl-14" v-html="accordion.richtext"></div>
       </VueAccordion>
     </div>
   </div>

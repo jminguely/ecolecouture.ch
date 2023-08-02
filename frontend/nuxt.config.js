@@ -48,7 +48,7 @@ export default defineNuxtConfig({
   vite: {
     plugins: [eslintPlugin()],
     compilerOptions: {
-      isCustomElement: true,
+      isCustomElement: (tag) => ['swiper', 'swiper-slide'].includes(tag),
     },
   },
 

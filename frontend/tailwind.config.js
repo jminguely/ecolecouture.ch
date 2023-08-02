@@ -17,14 +17,19 @@ module.exports = {
       transparent: 'transparent',
       current: 'currentColor',
       white: '#FFFEF1',
+      gray: '#eeeeee',
       black: '#2D3A4D',
       blue: {
-        DEFAULT: '#1500FF', // => .bg-brand
-        lighter: lighten('#1500FF', 0.2), // => .bg-brand-lighter
-        darker: darken('#1500FF', 0.2), // => .bg-brand-darker
+        DEFAULT: '#2543AB',
+        lighter: lighten('#2543AB', 0.2),
+        darker: darken('#2543AB', 0.2),
       },
       turquoise: '#03FFC0',
-      pink: '#FF44CD',
+      pink: {
+        DEFAULT: '#FF44CD',
+        lighter: lighten('#FF44CD', 0.2),
+        darker: darken('#FF44CD', 0.2),
+      },
       lightpink: '#FFD8DD',
       green: '#008163',
       yellow: '#E1DD4B',
@@ -46,9 +51,11 @@ module.exports = {
   safelist: [
     {
       pattern: /bg-/,
+      variants: ['hover', 'active'],
     },
     {
       pattern: /text-/,
+      variants: ['hover', 'active'],
     },
   ],
 }

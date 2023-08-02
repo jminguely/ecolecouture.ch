@@ -13,7 +13,7 @@
       </h1>
       <button
         id="menuToggle"
-        class="button button-shape-4 fixed top-0 right-0 m-5 bg-blue text-white hover:bg-blue-darker z-50"
+        class="button button-shape-4 fixed top-0 right-0 m-5 bg-blue text-white hover:bg-blue-darker active:bg-blue-lighter z-50 transition-colors"
         @click="emit('updateMenuOpen', !menuOpen)"
       >
         <span v-if="menuOpen">Close</span>

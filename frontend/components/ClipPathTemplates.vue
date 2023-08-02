@@ -26,6 +26,21 @@
           d="M0.227,0.036 c0.162,0,0.642,-0.117,0.725,0.071 c0.084,0.188,0.051,0.6,-0.057,0.707 c-0.107,0.107,-0.401,0.186,-0.526,0.186 C0.246,1,0,0.801,0,0.443 S0.065,0.036,0.227,0.036"
         />
       </clipPath>
+      <clipPath id="thumbClip1" clipPathUnits="objectBoundingBox">
+        <path
+          d="M0.463,0 c0.26,0,0.537,0.177,0.537,0.425 c0,0.248,-0.144,0.575,-0.478,0.575 C0.187,1,0,0.765,0,0.513 C0,0.261,0.203,0,0.463,0"
+        />
+      </clipPath>
+      <clipPath id="thumbClip2" clipPathUnits="objectBoundingBox">
+        <path
+          d="M259.237 0c230.5 0 311.682 149.915 311.682 273.687C570.919 397.459 499.577 584 319.365 584S0 477.222 0 344.084C0 210.946 28.737 0 259.237 0Z"
+        />
+      </clipPath>
+      <clipPath id="thumbClip3" clipPathUnits="objectBoundingBox">
+        <path
+          d="M268.79.5c150.748 0 311.536 106.228 311.536 255.117 0 148.89-83.6 345.204-277.388 345.204C109.15 600.821.5 459.927.5 308.561.5 157.194 118.042.5 268.79.5Z"
+        />
+      </clipPath>
     </defs>
   </svg>
 </template>
@@ -55,5 +70,15 @@
 
 .button-shape-5 {
   clip-path: url(#buttonClip5);
+}
+
+.thumb-shape-1 {
+  clip-path: url(#thumbClip1);
+}
+.thumb-shape-2 {
+  clip-path: url(#thumbClip2);
+}
+.thumb-shape-3 {
+  clip-path: url(#thumbClip3);
 }
 </style>

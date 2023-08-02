@@ -73,6 +73,11 @@ if (!function_exists('react_setup')) :
       'flex-width'  => true,
       'flex-height' => true,
     ));
+
+    add_image_size('gallery-vertical', 640, 1080, true);
+
+    update_option('thumbnail_size_w', 640);
+    update_option('thumbnail_size_h', 640);
   }
 endif;
 add_action('after_setup_theme', 'react_setup');

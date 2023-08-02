@@ -32,9 +32,10 @@ query fetchPage($uri: ID!) {
           }
           ... on Page_Pagefields_sections_Flexiblecontent_Slider {
             images {
+              altText
               mediaDetails {
-                sizes(include: MEDIUM) {
-                  file
+                sizes(include: GALLERY_VERTICAL) {
+                  sourceUrl
                 }
               }
             }
@@ -44,9 +45,10 @@ query fetchPage($uri: ID!) {
               text
               title
               image {
+                altText
                 mediaDetails {
-                  sizes(include: MEDIUM) {
-                    file
+                  sizes(include: THUMBNAIL) {
+                    sourceUrl
                   }
                 }
               }

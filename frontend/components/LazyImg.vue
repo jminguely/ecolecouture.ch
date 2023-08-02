@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-blue">
+  <div class="bg-gray">
     <nuxt-img
       v-bind="$attrs"
       :class="{ loaded }"
@@ -11,12 +11,6 @@
 
 <script>
 export default {
-  props: {
-    imgNode: {
-      type: Object,
-      required: true,
-    },
-  },
   data() {
     return {
       loaded: false,
