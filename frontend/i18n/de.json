@@ -1,4 +1,6 @@
 {
-  "welcome": "Hallo",
-  "test": "Tst DE"
+  "navigation": {
+    "open": "Menu",
+    "close": "Schliessen"
+  }
 }

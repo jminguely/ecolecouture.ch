@@ -30,6 +30,7 @@ module.exports = {
         lighter: lighten('#FF44CD', 0.2),
         darker: darken('#FF44CD', 0.2),
       },
+      red: '#FF5959',
       lightpink: '#FFD8DD',
       green: '#008163',
       yellow: '#E1DD4B',

@@ -1,11 +1,11 @@
 <template>
-  <nav>
-    <ul>
+  <nav class="pr-5">
+    <ul class="flex flex-row gap-5">
       <li v-for="lang in navLocales" :key="lang.code">
-        <NuxtLink v-if="lang.url" class="underline" :to="lang.url">
+        <NuxtLink v-if="lang.url" class="opacity-50 underline" :to="lang.url">
           {{ lang.code }}
         </NuxtLink>
-        <span v-else>{{ lang.code }}</span>
+        <span v-else class="font-bold">{{ lang.code }}</span>
       </li>
     </ul>
   </nav>

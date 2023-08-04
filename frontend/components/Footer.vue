@@ -7,6 +7,27 @@
         alt="École de Couture - Lehratelier, Fribourg"
       />
     </nuxt-link>
+    <div class="grid grid-cols-5">
+      <div>
+        <address>
+          Derrière-Les-Rempars 5<br />
+          1700 Fribourg<br />
+          info@ecolecouture.ch
+        </address>
+      </div>
+      <div>
+        <Navigation />
+      </div>
+      <div class="col-span-3">
+        Design et concept | eikonlab: Adèle Brodard, Samuel Bouverat<br />
+        Suivi de projet et encadrement: Martial Mingam, Ann Griffin, Julien
+        Minguely<br />
+        Développement: Julien Minguely<br />
+        Photographies: xxx<br />
+        Redaction textes: xxx<br />
+        Traduction allemande: xxx
+      </div>
+    </div>
   </footer>
 </template>
 

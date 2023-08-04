@@ -1,4 +1,7 @@
 {
-  "welcome": "Hello",
-  "test": "Tst FR"
+  "menu": "Menuer",
+  "navigation": {
+    "open": "Menu",
+    "close": "Fermer"
+  }
 }

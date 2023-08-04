@@ -1,5 +1,5 @@
 <template>
-  <nav class="main-navigation text-4xl">
+  <nav v-bind="$attrs">
     <ul>
       <li v-for="menuItem in menu.menuItems?.nodes" :key="menuItem.id">
         <nuxt-link v-if="menuItem.uri" class="underline" :to="menuItem.uri">
@@ -8,7 +8,7 @@
         <span v-else>
           {{ menuItem.label }}
         </span>
-        <ul v-if="menuItem.childItems?.nodes.length" class="ml-12">
+        <ul v-if="menuItem.childItems?.nodes.length" class="sub-nav">
           <li
             v-for="subMenuItem in menuItem.childItems?.nodes"
             :key="subMenuItem.id"
@@ -44,3 +44,9 @@ watch(locale, async () => {
   }, 1000)
 })
 </script>
+
+<style lang="postcss" scoped>
+.sub-nav {
+  margin-left: 1.75em;
+}
+</style>

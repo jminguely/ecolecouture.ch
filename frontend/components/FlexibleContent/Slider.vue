@@ -1,6 +1,5 @@
 <template>
   <swiper
-    ref="swiperContainer"
     class="relative"
     slides-per-view="1"
     pagination
@@ -32,14 +31,14 @@
 
 <script>
 import LazyImg from '@/components/LazyImg.vue'
-import { useSwiper, Swiper, SwiperSlide } from 'swiper/vue'
+import SliderNextArrow from './SliderNextArrow'
+import SliderPrevArrow from './SliderPrevArrow'
+
+import { Swiper, SwiperSlide } from 'swiper/vue'
 import { Pagination } from 'swiper/modules'
 
-// Import Swiper styles
 import 'swiper/css'
 import 'swiper/css/pagination'
-import SliderNextArrow from './SliderNextArrow.vue'
-import SliderPrevArrow from './SliderPrevArrow.vue'
 
 export default {
   components: {
@@ -56,11 +55,8 @@ export default {
     },
   },
   setup() {
-    const swiper = useSwiper()
-
     return {
-      swiper,
-      modules: [Navigation, Pagination],
+      modules: [Pagination],
     }
   },
 }
