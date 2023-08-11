@@ -3,8 +3,11 @@
     <a
       v-for="(button, i) in buttons"
       :key="i"
-      class="button button-shape-1"
-      :class="`bg-${button.color} hover:bg-${button.color}-darker active:bg-${button.color}-lighter`"
+      class="button"
+      :class="[
+        `bg-${button.color} hover:bg-${button.color}-darker active:bg-${button.color}-lighter`,
+        `button-shape-${$getRandomInt(5)}`,
+      ]"
       :href="button.link.url"
       :target="button.link.target"
     >

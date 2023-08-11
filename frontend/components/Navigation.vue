@@ -26,9 +26,16 @@
 <script setup>
 import fetchMenu from '~/graphql/fetchMenu.gql'
 
+const props = defineProps({
+  location: {
+    type: String,
+    default: 'MENU_PRIMARY',
+  },
+})
+
 const { locale } = useI18n()
 
-const variables = { lang: locale.value, location: 'MENU_PRIMARY' }
+const variables = { lang: locale.value, location: props.location }
 
 const { data } = await useAsyncQuery(fetchMenu, variables)
 
@@ -38,7 +45,7 @@ const menu = reactive({
 
 watch(locale, async () => {
   setTimeout(async () => {
-    const variables = { lang: locale.value, location: 'MENU_PRIMARY' }
+    const variables = { lang: locale.value, location: props.location }
     const { data } = await useAsyncQuery(fetchMenu, variables)
     menu.menuItems = data.value.menuItems
   }, 1000)

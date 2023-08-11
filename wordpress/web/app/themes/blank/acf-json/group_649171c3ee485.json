@@ -26,11 +26,11 @@
             "rows_per_page": 20,
             "sub_fields": [
                 {
-                    "key": "field_64c12a19a3761",
-                    "label": "Theme",
-                    "name": "theme",
+                    "key": "field_64d5f31481d66",
+                    "label": "Contenu",
+                    "name": "",
                     "aria-label": "",
-                    "type": "select",
+                    "type": "tab",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -39,21 +39,8 @@
                         "class": "",
                         "id": ""
                     },
-                    "show_in_graphql": 1,
-                    "choices": {
-                        "white": "white",
-                        "yellow": "yellow",
-                        "blue": "blue",
-                        "pink": "pink",
-                        "lightpink": "lightpink"
-                    },
-                    "default_value": "white",
-                    "return_format": "value",
-                    "multiple": 0,
-                    "allow_null": 0,
-                    "ui": 0,
-                    "ajax": 0,
-                    "placeholder": "",
+                    "placement": "top",
+                    "endpoint": 0,
                     "parent_repeater": "field_64c12a0da3760"
                 },
                 {
@@ -444,6 +431,77 @@
                     "max": "",
                     "button_label": "Ajouter un contenu",
                     "parent_repeater": "field_64c12a0da3760"
+                },
+                {
+                    "key": "field_64d5f375ebd4e",
+                    "label": "Mise en page",
+                    "name": "",
+                    "aria-label": "",
+                    "type": "tab",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "placement": "top",
+                    "endpoint": 0,
+                    "parent_repeater": "field_64c12a0da3760"
+                },
+                {
+                    "key": "field_64c12a19a3761",
+                    "label": "Theme",
+                    "name": "theme",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "show_in_graphql": 1,
+                    "choices": {
+                        "white": "white",
+                        "yellow": "yellow",
+                        "blue": "blue",
+                        "pink": "pink",
+                        "lightpink": "lightpink"
+                    },
+                    "default_value": "white",
+                    "return_format": "value",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": "",
+                    "parent_repeater": "field_64c12a0da3760"
+                },
+                {
+                    "key": "field_64d5f2e981d65",
+                    "label": "Full width",
+                    "name": "fullWidth",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "show_in_graphql": 1,
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": "",
+                    "parent_repeater": "field_64c12a0da3760"
                 }
             ]
         }
@@ -472,5 +530,5 @@
     "graphql_field_name": "pageFields",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1690991609
+    "modified": 1691743118
 }

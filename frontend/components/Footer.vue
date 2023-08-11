@@ -1,31 +1,38 @@
 <template>
-  <footer class="mt-auto p-8 bg-green">
+  <footer class="mt-auto p-8 bg-green text-white text-sm">
     <nuxt-link :to="header.homeUrl || '/'">
       <img
-        class="w-48 brightness-0 invert"
+        class="w-48 brightness-0 invert mb-10"
         src="../assets/img/logo-ecolecouture.png"
         alt="École de Couture - Lehratelier, Fribourg"
       />
     </nuxt-link>
-    <div class="grid grid-cols-5">
+    <div class="grid grid-cols-5 gap-10">
       <div>
-        <address>
+        <p class="mb-5">
           Derrière-Les-Rempars 5<br />
           1700 Fribourg<br />
           info@ecolecouture.ch
-        </address>
+        </p>
+        <Navigation location="MENU_SOCIAL" />
       </div>
-      <div>
-        <Navigation />
+      <div class="col-span-2">
+        <Navigation location="MENU_FOOTER" />
       </div>
-      <div class="col-span-3">
-        Design et concept | eikonlab: Adèle Brodard, Samuel Bouverat<br />
-        Suivi de projet et encadrement: Martial Mingam, Ann Griffin, Julien
-        Minguely<br />
-        Développement: Julien Minguely<br />
-        Photographies: xxx<br />
-        Redaction textes: xxx<br />
-        Traduction allemande: xxx
+      <div class="col-span-2">
+        <div class="grid grid-cols-3">
+          <span class="opacity-60">Conception:</span>
+          <span class="col-span-2">eikonlab</span>
+          <span class="opacity-60">Design:</span>
+          <span class="col-span-2">Adèle Brodard, Samuel Bouverat</span>
+
+          <span class="opacity-60">Encadrement:</span>
+          <span class="col-span-2">
+            Martial Mingam, Ann Griffin, Julien Minguely
+          </span>
+          <span class="opacity-60">Développement web:</span>
+          <span class="col-span-2">Julien Minguely</span>
+        </div>
       </div>
     </div>
   </footer>
