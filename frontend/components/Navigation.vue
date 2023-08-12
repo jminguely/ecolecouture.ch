@@ -53,7 +53,15 @@ watch(locale, async () => {
 </script>
 
 <style lang="postcss" scoped>
-.sub-nav {
-  margin-left: 1.75em;
+.h1 {
+  .sub-nav {
+    margin-left: 1.75em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+
+  li {
+    margin-bottom: 0.75em;
+  }
 }
 </style>

@@ -1,10 +1,7 @@
 <template>
   <div>
     <div v-for="(accordion, i) in accordionsList" :key="i" class="mb-3">
-      <button
-        class="font-bold"
-        @click="accordion.expanded = !accordion.expanded"
-      >
+      <button class="h3" @click="accordion.expanded = !accordion.expanded">
         {{ accordion.title }}
         <span
           class="relative inline-block -top-0.5 left-1"
@@ -14,7 +11,9 @@
         </span>
       </button>
       <VueAccordion :expanded="accordion.expanded">
-        <div class="py-3 pl-14" v-html="accordion.richtext"></div>
+        <div class="pt-3 pl-14">
+          <Richtext :richtext="accordion.richtext" />
+        </div>
       </VueAccordion>
     </div>
   </div>
@@ -22,6 +21,7 @@
 
 <script setup>
 import { VueAccordion } from '@ztrehagem/vue-accordion'
+import Richtext from './Richtext.vue'
 
 const props = defineProps({
   accordions: {

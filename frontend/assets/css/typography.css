@@ -1,0 +1,54 @@
+@font-face {
+  font-family: 'Basteleur';
+  font-weight: 700;
+  src: url('/fonts/Basteleur-Bold.woff2') format('woff2'),
+    url('/fonts/Basteleur-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'SuisseIntl';
+  font-weight: 400;
+  src: url('/fonts/SuisseIntl-Regular.woff2') format('woff2'),
+    url('/fonts/SuisseIntl-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'SuisseIntl';
+  font-weight: 600;
+  src: url('/fonts/SuisseIntl-SemiBold.woff2') format('woff2'),
+    url('/fonts/SuisseIntl-SemiBold.woff') format('woff');
+}
+
+html {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+h1,
+.h1 {
+  @apply antialiased font-sans;
+
+  font-size: 2.85rem;
+  letter-spacing: 0.05em;
+  line-height: 0.98em;
+}
+
+h2,
+.h2 {
+  @apply font-heading mb-8;
+
+  font-size: 1.57rem;
+  letter-spacing: 0.05em;
+  line-height: 0.75em;
+}
+
+h3,
+.h3 {
+  @apply font-sans font-semibold;
+  font-size: 1rem;
+}
+
+.underline {
+  text-decoration-thickness: 0.075em;
+  text-underline-offset: 0.1em;
+}

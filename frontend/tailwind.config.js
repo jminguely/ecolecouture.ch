@@ -35,17 +35,15 @@ module.exports = {
       green: '#008163',
       yellow: '#E1DD4B',
     },
-    extend: {
-      aspectRatio: {
-        cine: '2.35 / 1',
-      },
-      transitionDuration: {
-        3000: '3000ms',
-      },
-      fontFamily: {
-        sans: ['Rubik', 'sans-serif'],
-        heading: ['Basteleur', 'sans-serif'],
-      },
+    fontSize: {},
+    fontWeight: {
+      normal: '400',
+      semibold: '600',
+      bold: '700',
+    },
+    fontFamily: {
+      sans: ['SuisseIntl', 'sans-serif'],
+      heading: ['Basteleur', 'sans-serif'],
     },
   },
   plugins: [],

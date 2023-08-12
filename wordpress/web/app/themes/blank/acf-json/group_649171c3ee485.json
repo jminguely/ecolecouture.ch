@@ -271,7 +271,7 @@
                                             "show_in_graphql": 1,
                                             "default_value": "",
                                             "tabs": "all",
-                                            "toolbar": "basic",
+                                            "toolbar": "full",
                                             "media_upload": 0,
                                             "delay": 0,
                                             "parent_repeater": "field_64c12bb7a3770"
@@ -530,5 +530,5 @@
     "graphql_field_name": "pageFields",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1691743118
+    "modified": 1691850823
 }

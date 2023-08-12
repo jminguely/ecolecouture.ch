@@ -1,13 +1,13 @@
 <template>
   <div
     class="section"
-    :class="[!content.fullwidth && 'py-12', `bg-${content.theme}`]"
+    :class="[!content.fullwidth && 'pt-12 pb-6', `bg-${content.theme}`]"
   >
-    <div :class="[!content.fullwidth && 'max-w-7xl mx-auto px-8']">
+    <div :class="[!content.fullwidth && 'max-w-5xl mx-auto px-8']">
       <div
         v-for="(row, i) in content.flexiblecontent"
         :key="i"
-        :class="[!content.fullwidth && 'py-5']"
+        :class="[!content.fullwidth && 'my-8']"
       >
         <Title
           v-if="row.type == 'Page_Pagefields_sections_Flexiblecontent_Title'"
@@ -65,8 +65,44 @@ const props = defineProps({
 })
 </script>
 
-<style lang="postcss" scoped>
+<style lang="postcss">
+h1,
+.h1 {
+  .section.bg-yellow & {
+    @apply text-pink;
+  }
+  .section.bg-blue & {
+    @apply text-pink;
+  }
+  .section.bg-white & {
+    @apply text-red;
+  }
+  .section.bg-lightpink & {
+    @apply text-red;
+  }
+}
+
+h2,
+.h2 {
+  .section.bg-yellow & {
+    @apply text-blue;
+  }
+  .section.bg-blue & {
+    @apply text-pink;
+  }
+  .section.bg-white & {
+    @apply text-red;
+  }
+  .section.bg-lightpink & {
+    @apply text-red;
+  }
+}
+
 .section.bg-blue {
   @apply text-white;
+}
+
+.section:first-child {
+  @apply pt-28;
 }
 </style>

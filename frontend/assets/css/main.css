@@ -2,9 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: 'Basteleur';
-  font-weight: 700;
-  src: url('/fonts/Basteleur-Bold.woff2') format('woff2'),
-    url('/fonts/Basteleur-Bold.woff') format('woff');
+body {
+  overscroll-behavior-y: none;
 }

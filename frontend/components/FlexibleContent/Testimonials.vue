@@ -22,14 +22,15 @@
         <div>
           <LazyImg
             v-if="testimonial.image.mediaDetails.sizes[0]"
-            class="w-full thumb-shape-1"
+            class="w-full"
+            :class="[`thumb-shape-${$getRandomInt(3)}`]"
             :alt="testimonial.image.altText"
             :src="`${testimonial.image.mediaDetails.sizes[0].sourceUrl}`"
           />
         </div>
         <div class="col-span-2">
-          <h3>{{ testimonial.title }}</h3>
-          <div v-html="testimonial.text"></div>
+          <h3 class="h2">{{ testimonial.title }}</h3>
+          <Richtext :richtext="testimonial.text" />
         </div>
       </div>
     </swiper-slide>
@@ -40,6 +41,7 @@
 import LazyImg from '@/components/LazyImg.vue'
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import { Pagination } from 'swiper/modules'
+import Richtext from './Richtext.vue'
 
 // Import Swiper styles
 import 'swiper/css'
@@ -50,6 +52,7 @@ import SliderPrevArrow from './SliderPrevArrow.vue'
 export default {
   components: {
     LazyImg,
+    Richtext,
     Swiper,
     SwiperSlide,
     SliderNextArrow,

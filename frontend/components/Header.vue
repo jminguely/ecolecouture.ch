@@ -1,6 +1,6 @@
 <template>
   <div>
-    <header class="p-8">
+    <header class="absolute p-8">
       <h1>
         <nuxt-link :to="header.homeUrl || '/'">
           <img
@@ -32,8 +32,8 @@
           alt="École de Couture - Lehratelier, Fribourg"
         />
       </nuxt-link>
-      <div class="p-8 max-w-6xl mx-auto">
-        <Navigation class="text-5xl" sub-nav-class="ml-12" />
+      <div class="p-8 max-w-5xl mx-auto">
+        <Navigation class="h1" sub-nav-class="ml-12" />
       </div>
     </div>
   </div>
@@ -65,7 +65,9 @@ const route = useRoute()
 watch(
   route,
   (value) => {
-    emit('updateMenuOpen', false)
+    setTimeout(() => {
+      emit('updateMenuOpen', false)
+    }, 300)
   },
   { deep: true, immediate: true }
 )
@@ -78,17 +80,16 @@ watch(
   left: 0;
   width: 100%;
   height: 100%;
-  overflow-y: scroll;
+  overflow-y: auto;
   pointer-events: none;
   opacity: 0;
   color: #fff;
   z-index: 20;
-  transition: opacity 0.3s 0.3s ease;
+  transition: opacity 0.3s ease;
 
   &.nav-open {
     pointer-events: auto;
     opacity: 1;
-    transition: opacity 0.3s ease;
   }
 }
 </style>

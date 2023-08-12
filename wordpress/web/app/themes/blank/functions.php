@@ -78,6 +78,13 @@ if (!function_exists('react_setup')) :
 
     update_option('thumbnail_size_w', 640);
     update_option('thumbnail_size_h', 640);
+
+    function wpa_45815($arr)
+    {
+      $arr['block_formats'] = 'Paragraph=p;Heading 2=h2;Heading 3=h3;';
+      return $arr;
+    }
+    add_filter('tiny_mce_before_init', 'wpa_45815');
   }
 endif;
 add_action('after_setup_theme', 'react_setup');
