@@ -45,6 +45,10 @@ module.exports = {
       sans: ['SuisseIntl', 'sans-serif'],
       heading: ['Basteleur', 'sans-serif'],
     },
+    maxWidth: {
+      lg: '1240px',
+      xl: '1920px',
+    },
   },
   plugins: [],
   safelist: [

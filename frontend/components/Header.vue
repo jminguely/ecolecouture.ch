@@ -1,6 +1,6 @@
 <template>
   <div>
-    <header class="absolute p-8">
+    <div class="logo-container p-8">
       <h1>
         <nuxt-link :to="header.homeUrl || '/'">
           <img
@@ -11,28 +11,29 @@
           />
         </nuxt-link>
       </h1>
-      <div class="fixed top-0 right-0 m-5 flex flex-row z-50 items-center">
-        <LangSwitcher :available-translations="availableTranslations" />
-        <button
-          id="menuToggle"
-          class="button bg-blue text-white hover:bg-blue-darker active:bg-blue-lighter transition-colors"
-          :class="[`button-shape-${$getRandomInt(5)}`]"
-          @click="emit('updateMenuOpen', !menuOpen)"
-        >
-          <span v-if="menuOpen">{{ $t('navigation.close') }}</span>
-          <span v-else>{{ $t('navigation.open') }}</span>
-        </button>
-      </div>
-    </header>
+    </div>
+    <div class="menu-toggle-container">
+      <LangSwitcher :available-translations="availableTranslations" />
+      <button
+        id="menuToggle"
+        class="button button-shape-1 bg-blue text-white hover:bg-blue-darker active:bg-blue-lighter transition-colors"
+        @click="emit('updateMenuOpen', !menuOpen)"
+      >
+        <span v-if="menuOpen">{{ $t('navigation.close') }}</span>
+        <span v-else>{{ $t('navigation.open') }}</span>
+      </button>
+    </div>
     <div class="nav-container bg-red" :class="[menuOpen && 'nav-open']">
-      <nuxt-link :to="header.homeUrl || '/'">
-        <img
-          class="brightness-0 invert w-48 m-8"
-          src="../assets/img/logo-ecolecouture.png"
-          alt="École de Couture - Lehratelier, Fribourg"
-        />
-      </nuxt-link>
-      <div class="p-8 max-w-5xl mx-auto">
+      <div class="logo-container">
+        <nuxt-link :to="header.homeUrl || '/'">
+          <img
+            class="brightness-0 invert w-48 m-8"
+            src="../assets/img/logo-ecolecouture.png"
+            alt="École de Couture - Lehratelier, Fribourg"
+          />
+        </nuxt-link>
+      </div>
+      <div class="p-8 pt-36 max-w-lg mx-auto">
         <Navigation class="h1" sub-nav-class="ml-12" />
       </div>
     </div>
@@ -74,6 +75,18 @@ watch(
 </script>
 
 <style lang="postcss" scoped>
+.logo-container {
+  @apply max-w-xl mx-auto absolute w-full;
+
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.menu-toggle-container {
+  @apply max-w-xl mx-auto fixed z-50 w-full p-8 flex justify-end items-center;
+  left: 50%;
+  transform: translateX(-50%);
+}
 .nav-container {
   position: fixed;
   top: 0;

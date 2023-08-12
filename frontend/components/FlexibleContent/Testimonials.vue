@@ -2,6 +2,7 @@
   <swiper
     class="relative"
     slides-per-view="1"
+    auto-height
     pagination
     :style="{
       '--swiper-pagination-bullet-size': '10px',
@@ -18,7 +19,7 @@
       :key="i"
       class="mb-3"
     >
-      <div class="grid grid-cols-3 px-14 gap-10 items-center">
+      <div class="grid md:grid-cols-3 px-14 gap-8 items-center">
         <div>
           <LazyImg
             v-if="testimonial.image.mediaDetails.sizes[0]"
@@ -28,7 +29,7 @@
             :src="`${testimonial.image.mediaDetails.sizes[0].sourceUrl}`"
           />
         </div>
-        <div class="col-span-2">
+        <div class="md:col-span-2 py-1">
           <h3 class="h2">{{ testimonial.title }}</h3>
           <Richtext :richtext="testimonial.text" />
         </div>

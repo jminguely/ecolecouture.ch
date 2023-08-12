@@ -1,37 +1,39 @@
 <template>
   <footer class="mt-auto p-8 bg-green text-white">
-    <nuxt-link :to="header.homeUrl || '/'">
-      <img
-        class="w-48 brightness-0 invert mb-10"
-        src="../assets/img/logo-ecolecouture.png"
-        alt="École de Couture - Lehratelier, Fribourg"
-      />
-    </nuxt-link>
-    <div class="grid grid-cols-2 lg:grid-cols-5 gap-10">
-      <div>
-        <p class="mb-5">
-          Derrière-Les-Rempars 5<br />
-          1700 Fribourg<br />
-          info@ecolecouture.ch
-        </p>
-        <Navigation location="MENU_SOCIAL" />
-      </div>
-      <div class="lg:col-span-2">
-        <Navigation location="MENU_FOOTER" />
-      </div>
-      <div class="col-span-2">
-        <div class="grid grid-cols-2 lg:grid-cols-3 gap-x-10">
-          <span class="opacity-60">Conception:</span>
-          <span class="lg:col-span-2">eikonlab</span>
-          <span class="opacity-60">Design:</span>
-          <span class="lg:col-span-2">Adèle Brodard, Samuel Bouverat</span>
+    <div class="max-w-xl mx-auto">
+      <nuxt-link :to="header.homeUrl || '/'">
+        <img
+          class="w-48 brightness-0 invert mb-10"
+          src="../assets/img/logo-ecolecouture.png"
+          alt="École de Couture - Lehratelier, Fribourg"
+        />
+      </nuxt-link>
+      <div class="grid grid-cols-2 lg:grid-cols-5 gap-8">
+        <div>
+          <p class="mb-5">
+            Derrière-Les-Rempars 5<br />
+            1700 Fribourg<br />
+            info@ecolecouture.ch
+          </p>
+          <Navigation location="MENU_SOCIAL" />
+        </div>
+        <div class="lg:col-span-2">
+          <Navigation location="MENU_FOOTER" />
+        </div>
+        <div class="col-span-2">
+          <div class="grid grid-cols-2 lg:grid-cols-3 gap-x-10">
+            <span class="opacity-60">Conception:</span>
+            <span class="lg:col-span-2">eikonlab</span>
+            <span class="opacity-60">Design:</span>
+            <span class="lg:col-span-2">Adèle Brodard, Samuel Bouverat</span>
 
-          <span class="opacity-60">Encadrement:</span>
-          <span class="lg:col-span-2">
-            Martial Mingam, Ann Griffin, Julien Minguely
-          </span>
-          <span class="opacity-60">Développement web:</span>
-          <span class="lg:col-span-2">Julien Minguely</span>
+            <span class="opacity-60">Encadrement:</span>
+            <span class="lg:col-span-2">
+              Martial Mingam, Ann Griffin, Julien Minguely
+            </span>
+            <span class="opacity-60">Développement web:</span>
+            <span class="lg:col-span-2">Julien Minguely</span>
+          </div>
         </div>
       </div>
     </div>

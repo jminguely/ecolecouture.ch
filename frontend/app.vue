@@ -17,10 +17,14 @@
 import ButtonClippath from './components/ClipPathTemplates.vue'
 
 const menuOpen = ref(false)
+const bodyOverflowHidden = ref(false)
 const availableTranslations = ref([])
 
 function updateMenuOpen(val) {
   menuOpen.value = val
+  setTimeout(() => {
+    bodyOverflowHidden.value = val
+  }, 300)
 }
 
 function updateAvailableTranslations(translations) {
@@ -32,10 +36,10 @@ useHead({
   viewport: 'width=device-width, initial-scale=1, maximum-scale=1',
   charset: 'utf-8',
   htmlAttrs: {
-    class: 'bg-white',
+    class: 'bg-white text-black',
   },
   bodyAttrs: {
-    class: { 'overflow-hidden': menuOpen },
+    class: { 'overflow-hidden': bodyOverflowHidden },
   },
   meta: [
     {

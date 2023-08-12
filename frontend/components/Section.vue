@@ -3,7 +3,7 @@
     class="section"
     :class="[!content.fullwidth && 'pt-12 pb-6', `bg-${content.theme}`]"
   >
-    <div :class="[!content.fullwidth && 'max-w-5xl mx-auto px-8']">
+    <div :class="[!content.fullwidth && 'max-w-lg mx-auto px-8']">
       <div
         v-for="(row, i) in content.flexiblecontent"
         :key="i"
@@ -80,6 +80,9 @@ h1,
   .section.bg-lightpink & {
     @apply text-red;
   }
+  .section.bg-red & {
+    @apply text-yellow;
+  }
 }
 
 h2,
@@ -95,6 +98,9 @@ h2,
   }
   .section.bg-lightpink & {
     @apply text-red;
+  }
+  .section.bg-red & {
+    @apply text-yellow;
   }
 }
 

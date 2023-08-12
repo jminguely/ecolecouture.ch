@@ -3,6 +3,7 @@
     class="relative"
     slides-per-view="1"
     pagination
+    auto-height
     :style="{
       '--swiper-pagination-bullet-size': '10px',
       '--swiper-pagination-bullet-inactive-opacity': '1',

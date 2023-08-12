@@ -187,7 +187,8 @@
                                                 "yellow": "yellow",
                                                 "blue": "blue",
                                                 "pink": "pink",
-                                                "lightpink": "lightpink"
+                                                "lightpink": "lightpink",
+                                                "red": "red"
                                             },
                                             "default_value": "blue",
                                             "return_format": "value",
@@ -470,7 +471,8 @@
                         "yellow": "yellow",
                         "blue": "blue",
                         "pink": "pink",
-                        "lightpink": "lightpink"
+                        "lightpink": "lightpink",
+                        "red": "red"
                     },
                     "default_value": "white",
                     "return_format": "value",
@@ -530,5 +532,5 @@
     "graphql_field_name": "pageFields",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1691850823
+    "modified": 1691856660
 }

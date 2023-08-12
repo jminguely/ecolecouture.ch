@@ -14,7 +14,7 @@ const props = defineProps({
 <style lang="postcss">
 .richtext {
   p {
-    @apply mb-3;
+    @apply mb-6;
   }
 
   ul {

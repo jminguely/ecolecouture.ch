@@ -4,10 +4,12 @@
       <button class="h3" @click="accordion.expanded = !accordion.expanded">
         {{ accordion.title }}
         <span
-          class="relative inline-block -top-0.5 left-1"
-          :class="[accordion.expanded && 'rotate-180']"
+          class="relative inline-block left-1 origin-center transition-transform"
+          :class="[accordion.expanded && '-rotate-180']"
         >
-          <img class="w-3" src="~/assets/img/icon-caret.svg" alt="" />
+          <svg class="icon w-3 h-3 relative top-0.5">
+            <use href="~/assets/img/icons.svg#caret"></use>
+          </svg>
         </span>
       </button>
       <VueAccordion :expanded="accordion.expanded">
