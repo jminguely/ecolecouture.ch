@@ -43,7 +43,15 @@
           "
           :testimonials="row.testimonials"
         />
-        <div v-else>{{ row }}</div>
+        <Galleries
+          v-else-if="
+            row.type == 'Page_Pagefields_sections_Flexiblecontent_Galerie'
+          "
+          :galleries="row.gallery"
+        />
+        <div v-else>
+          <pre>{{ row }}</pre>
+        </div>
       </div>
     </div>
   </div>
@@ -55,6 +63,7 @@ import Buttons from './FlexibleContent/Buttons.vue'
 import Richtext from './FlexibleContent/Richtext.vue'
 import Accordions from './FlexibleContent/Accordions.vue'
 import Slider from './FlexibleContent/Slider.vue'
+import Galleries from './FlexibleContent/Galleries.vue'
 import Testimonials from './FlexibleContent/Testimonials.vue'
 
 const props = defineProps({
@@ -109,6 +118,6 @@ h2,
 }
 
 .section:first-child {
-  @apply pt-28;
+  @apply pt-32;
 }
 </style>

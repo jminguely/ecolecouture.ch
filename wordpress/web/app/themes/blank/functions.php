@@ -79,12 +79,88 @@ if (!function_exists('react_setup')) :
     update_option('thumbnail_size_w', 640);
     update_option('thumbnail_size_h', 640);
 
-    function wpa_45815($arr)
+    function timymcd_block_formats($arr)
     {
       $arr['block_formats'] = 'Paragraph=p;Heading 2=h2;Heading 3=h3;';
       return $arr;
     }
-    add_filter('tiny_mce_before_init', 'wpa_45815');
+    add_filter('tiny_mce_before_init', 'timymcd_block_formats');
+
+    function cptui_register_my_cpts_gallery()
+    {
+
+      /**
+       * Post Type: Galeries.
+       */
+
+      $labels = [
+        "name" => esc_html__("Galeries", "react"),
+        "singular_name" => esc_html__("Galerie", "react"),
+        "menu_name" => esc_html__("Galeries", "react"),
+        "all_items" => esc_html__("Toutes les galeries", "react"),
+        "add_new" => esc_html__("Ajouter", "react"),
+        "add_new_item" => esc_html__("Ajouter une nouvelle galerie", "react"),
+        "edit_item" => esc_html__("Éditer la galerie", "react"),
+        "new_item" => esc_html__("Nouvelle galerie", "react"),
+        "view_item" => esc_html__("Voir la galerie", "react"),
+        "view_items" => esc_html__("Voir les galeries", "react"),
+        "search_items" => esc_html__("Recherches dans les galeries", "react"),
+        "not_found" => esc_html__("Aucune galerie", "react"),
+        "not_found_in_trash" => esc_html__("Aucune galerie dans la corbeille", "react"),
+        "parent" => esc_html__("Galerie parente:", "react"),
+        "featured_image" => esc_html__("Featured image for this Galerie", "react"),
+        "set_featured_image" => esc_html__("Set featured image for this Galerie", "react"),
+        "remove_featured_image" => esc_html__("Remove featured image for this Galerie", "react"),
+        "use_featured_image" => esc_html__("Use as featured image for this Galerie", "react"),
+        "archives" => esc_html__("Galerie archives", "react"),
+        "insert_into_item" => esc_html__("Insert into Galerie", "react"),
+        "uploaded_to_this_item" => esc_html__("Upload to this Galerie", "react"),
+        "filter_items_list" => esc_html__("Filter Galeries list", "react"),
+        "items_list_navigation" => esc_html__("Galeries list navigation", "react"),
+        "items_list" => esc_html__("Liste des galeries", "react"),
+        "attributes" => esc_html__("Galeries attributes", "react"),
+        "name_admin_bar" => esc_html__("Galerie", "react"),
+        "item_published" => esc_html__("Galerie publiée", "react"),
+        "item_published_privately" => esc_html__("Galerie published privately.", "react"),
+        "item_reverted_to_draft" => esc_html__("Galerie reverted to draft.", "react"),
+        "item_scheduled" => esc_html__("Galerie programmée", "react"),
+        "item_updated" => esc_html__("Galerie mise à jour.", "react"),
+        "parent_item_colon" => esc_html__("Galerie parente:", "react"),
+      ];
+
+      $args = [
+        "label" => esc_html__("Galeries", "react"),
+        "labels" => $labels,
+        "description" => "",
+        "public" => true,
+        "publicly_queryable" => true,
+        "show_ui" => true,
+        "show_in_rest" => true,
+        "rest_base" => "",
+        "rest_controller_class" => "WP_REST_Posts_Controller",
+        "rest_namespace" => "wp/v2",
+        "has_archive" => false,
+        "show_in_menu" => true,
+        "show_in_nav_menus" => true,
+        "delete_with_user" => false,
+        "exclude_from_search" => false,
+        "capability_type" => "post",
+        "map_meta_cap" => true,
+        "hierarchical" => false,
+        "can_export" => false,
+        "rewrite" => ["slug" => "galerie", "with_front" => true],
+        "query_var" => true,
+        "menu_icon" => "dashicons-images-alt",
+        "supports" => ["title", "editor"],
+        "show_in_graphql" => true,
+        "graphql_single_name" => "Galerie",
+        "graphql_plural_name" => "Galeries",
+      ];
+
+      register_post_type("gallery", $args);
+    }
+
+    add_action('init', 'cptui_register_my_cpts_gallery');
   }
 endif;
 add_action('after_setup_theme', 'react_setup');

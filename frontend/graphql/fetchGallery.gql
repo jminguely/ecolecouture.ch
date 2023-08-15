@@ -1,0 +1,26 @@
+query fetchGallery($slug: ID!) {
+  galerie(id: $slug, idType: SLUG) {
+    title
+    content
+    galleryFields {
+      gallery {
+        id
+        altText
+        mediaDetails {
+          sizes(include: LARGE) {
+            sourceUrl
+          }
+        }
+      }
+    }
+    translations {
+      id
+      uri
+      language {
+        id
+        code
+        locale
+      }
+    }
+  }
+}

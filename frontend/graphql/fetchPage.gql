@@ -55,6 +55,26 @@ query fetchPage($uri: ID!) {
               }
             }
           }
+          ... on Page_Pagefields_sections_Flexiblecontent_Galerie {
+            fieldGroupName
+            gallery {
+              ... on Galerie {
+                id
+                slug
+                uri
+                galleryFields {
+                  gallery {
+                    altText
+                    mediaDetails {
+                      sizes(include: GALLERY_VERTICAL) {
+                        sourceUrl
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
         }
       }
     }

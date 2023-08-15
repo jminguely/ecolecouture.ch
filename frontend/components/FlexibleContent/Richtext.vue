@@ -1,5 +1,5 @@
 <template>
-  <div class="richtext" v-html="richtext"></div>
+  <div class="richtext" v-bind="$attrs" v-html="richtext"></div>
 </template>
 
 <script setup>

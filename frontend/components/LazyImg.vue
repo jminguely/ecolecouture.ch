@@ -1,12 +1,10 @@
 <template>
-  <div class="bg-gray">
-    <nuxt-img
-      v-bind="$attrs"
-      :class="{ loaded }"
-      loading="lazy"
-      @load="loaded = true"
-    />
-  </div>
+  <nuxt-img
+    v-bind="$attrs"
+    :class="{ loaded }"
+    loading="lazy"
+    @load="loaded = true"
+  />
 </template>
 
 <script>
