@@ -1,6 +1,6 @@
 <template>
   <nav v-bind="$attrs">
-    <ul>
+    <ul class="text-white">
       <li v-for="menuItem in menu.menuItems?.nodes" :key="menuItem.id">
         <nuxt-link v-if="menuItem.uri" class="underline" :to="menuItem.uri">
           {{ menuItem.label }}

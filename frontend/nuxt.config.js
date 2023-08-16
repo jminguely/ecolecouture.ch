@@ -3,14 +3,18 @@ import eslintPlugin from 'vite-plugin-eslint'
 export default defineNuxtConfig({
   ssr: false,
 
+  runtimeConfig: {
+    public: {
+      wp: process.env.WP_URL,
+    },
+  },
+
   modules: [
     '@nuxtjs/apollo',
     '@nuxt/image-edge',
     '@nuxtjs/i18n',
     '@pinia/nuxt',
   ],
-
-  buildModules: ['@nuxtjs/google-fonts'],
 
   i18n: {
     vueI18n: './i18n.config.js',
@@ -21,16 +25,6 @@ export default defineNuxtConfig({
       { code: 'FR', iso: 'fr-CH', locale: 'fr_CH', homeUrl: '/accueil' },
       { code: 'DE', iso: 'de-CH', locale: 'de_CH', homeUrl: '/de/wilkommen' },
     ],
-  },
-
-  googleFonts: {
-    families: {
-      'Space+Mono': true,
-      Rubik: {
-        wght: [100 + '..' + 900],
-        ital: [100 + '..' + 900],
-      },
-    },
   },
 
   apollo: {

@@ -3,15 +3,15 @@ query fetchPage($uri: ID!) {
     id
     title
     content
+    pageSidebarFields {
+      theme
+    }
     pageFields {
       sections {
         theme
         fullwidth
         flexiblecontent {
           type: __typename
-          ... on Page_Pagefields_sections_Flexiblecontent_Title {
-            title
-          }
           ... on Page_Pagefields_sections_Flexiblecontent_Richtext {
             richtext
             twoColumns
@@ -61,7 +61,8 @@ query fetchPage($uri: ID!) {
             gallery {
               ... on Galerie {
                 id
-                slug
+                uri
+                title
                 galleryFields {
                   gallery {
                     altText

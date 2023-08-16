@@ -50,18 +50,18 @@ export default {
 
 <style lang="postcss" scoped>
 .swiper-slide {
-  transform: scale(0.8);
+  transform: scale(0.9);
   opacity: 0;
   transition: transform 0.3s ease-in-out, opacity 0.15s;
 }
 
 .swiper-slide-prev {
-  transform: scale(0.8) translateX(20%);
+  transform: scale(0.9) translateX(20%);
   z-index: 1;
   opacity: 1;
 }
 .swiper-slide-next {
-  transform: scale(0.8) translateX(-20%);
+  transform: scale(0.9) translateX(-20%);
   z-index: 1;
   opacity: 1;
 }

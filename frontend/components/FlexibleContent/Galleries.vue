@@ -1,16 +1,17 @@
 <template>
   <div>
     <div v-for="gallery in galleries" :key="gallery.id" class="mb-16">
-      <Gallery :images="gallery.galleryFields.gallery" />
-      <div class="flex justify-end mt-8">
-        <a
-          :href="gallery.uri"
-          class="button bg-blue text-white"
+      <div class="flex justify-between items-baseline mb-8">
+        <h2 class="mb-0">{{ gallery.title }}</h2>
+        <nuxt-link
+          :to="gallery.uri"
+          class="button bg-blue text-white inline-block"
           :class="[`button-shape-${$getRandomInt(5)}`]"
         >
           {{ $t('more') }}
-        </a>
+        </nuxt-link>
       </div>
+      <Gallery :images="gallery.galleryFields.gallery" />
     </div>
   </div>
 </template>

@@ -1,22 +1,13 @@
 <template>
-  <div
-    class="section"
-    :class="[!content.fullwidth && 'pt-12 pb-6', `bg-${content.theme}`]"
-  >
-    <div :class="[!content.fullwidth && 'max-w-lg mx-auto px-8']">
+  <div class="section" :class="[`bg-${content.theme}`]">
+    <div :class="[!content.fullwidth && 'max-w-lg mx-auto px-8 pb-8']">
       <div
         v-for="(row, i) in content.flexiblecontent"
         :key="i"
         :class="[!content.fullwidth && 'my-8']"
       >
-        <Title
-          v-if="row.type == 'Page_Pagefields_sections_Flexiblecontent_Title'"
-          :title="row.title"
-        />
         <Buttons
-          v-else-if="
-            row.type == 'Page_Pagefields_sections_Flexiblecontent_Buttons'
-          "
+          v-if="row.type == 'Page_Pagefields_sections_Flexiblecontent_Buttons'"
           :buttons="row.buttons"
         />
         <Richtext
@@ -65,7 +56,6 @@
 </template>
 
 <script setup>
-import Title from './FlexibleContent/Title.vue'
 import Buttons from './FlexibleContent/Buttons.vue'
 import Richtext from './FlexibleContent/Richtext.vue'
 import Accordions from './FlexibleContent/Accordions.vue'
@@ -85,47 +75,43 @@ const props = defineProps({
 <style lang="postcss">
 h1,
 .h1 {
-  .section.bg-yellow & {
+  .bg-yellow & {
     @apply text-pink;
   }
-  .section.bg-blue & {
+  .bg-blue & {
     @apply text-pink;
   }
-  .section.bg-white & {
+  .bg-white & {
     @apply text-red;
   }
-  .section.bg-lightpink & {
+  .bg-lightpink & {
     @apply text-red;
   }
-  .section.bg-red & {
+  .bg-red & {
     @apply text-yellow;
   }
 }
 
 h2,
 .h2 {
-  .section.bg-yellow & {
+  .bg-yellow & {
     @apply text-blue;
   }
-  .section.bg-blue & {
+  .bg-blue & {
     @apply text-pink;
   }
-  .section.bg-white & {
+  .bg-white & {
     @apply text-red;
   }
-  .section.bg-lightpink & {
+  .bg-lightpink & {
     @apply text-red;
   }
-  .section.bg-red & {
+  .bg-red & {
     @apply text-yellow;
   }
 }
 
-.section.bg-blue {
+.bg-blue {
   @apply text-white;
-}
-
-.section:first-child {
-  @apply pt-32;
 }
 </style>

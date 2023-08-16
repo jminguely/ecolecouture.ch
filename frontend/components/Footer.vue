@@ -21,7 +21,7 @@
           <Navigation location="MENU_FOOTER" />
         </div>
         <div class="col-span-2">
-          <div class="grid grid-cols-2 lg:grid-cols-3 gap-x-10">
+          <div class="grid grid-cols-2 lg:grid-cols-3 gap-x-8">
             <span class="opacity-60">Conception:</span>
             <span class="lg:col-span-2">eikonlab</span>
             <span class="opacity-60">Design:</span>

@@ -3,11 +3,13 @@
     class="richtext"
     v-bind="$attrs"
     :class="[twoColumns && 'two-columns']"
-    v-html="richtext"
+    v-html="richtextprocessed"
   ></div>
 </template>
 
 <script setup>
+const config = useRuntimeConfig()
+
 const props = defineProps({
   richtext: {
     type: String,
@@ -16,6 +18,14 @@ const props = defineProps({
   twoColumns: {
     type: Boolean,
   },
+})
+
+// Parse all URLs and replace the WP domain with the app domain
+const richtextprocessed = computed(() => {
+  const baseUrl = config.public.wp
+  const regex = new RegExp(`(${baseUrl})(?!\app\\/uploads)(\\/.*$)?`, 'g')
+
+  return props.richtext.replace(regex, `/$2`)
 })
 </script>
 
@@ -32,6 +42,10 @@ const props = defineProps({
       content: '—';
       @apply mr-1;
     }
+  }
+
+  a {
+    @apply underline;
   }
 
   &.two-columns {

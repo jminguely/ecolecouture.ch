@@ -1,11 +1,10 @@
 <template>
   <div>
     <div class="logo-container p-8">
-      <h1>
-        <nuxt-link :to="header.homeUrl || '/'">
+      <h1 class="inline-block">
+        <nuxt-link :to="header.homeUrl || '/'" class="pointer-events-auto">
           <img
-            class="w-48"
-            :class="[menuOpen && 'brightness-0 invert']"
+            class="w-48 header-logo"
             src="../assets/img/logo-ecolecouture.png"
             alt="École de Couture - Lehratelier, Fribourg"
           />
@@ -33,7 +32,7 @@
           />
         </nuxt-link>
       </div>
-      <div class="p-8 pt-36 max-w-lg mx-auto">
+      <div class="p-8 pt-36 max-w-lg mx-auto text-white">
         <Navigation class="h1" sub-nav-class="ml-12" />
       </div>
     </div>
@@ -74,9 +73,19 @@ watch(
 )
 </script>
 
+<style lang="postcss">
+.header-logo {
+  body.bg-blue &,
+  body.bg-red &,
+  body.bg-pink & {
+    @apply brightness-0 invert;
+  }
+}
+</style>
+
 <style lang="postcss" scoped>
 .logo-container {
-  @apply max-w-xl mx-auto absolute w-full;
+  @apply max-w-xl mx-auto absolute w-full pointer-events-none z-30;
 
   left: 50%;
   transform: translateX(-50%);
@@ -97,7 +106,7 @@ watch(
   pointer-events: none;
   opacity: 0;
   color: #fff;
-  z-index: 20;
+  z-index: 40;
   transition: opacity 0.3s ease;
 
   &.nav-open {
