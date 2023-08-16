@@ -1,5 +1,5 @@
 <template>
-  <div class="mb-16">
+  <div>
     <div v-for="gallery in galleries" :key="gallery.id" class="mb-16">
       <Gallery :images="gallery.galleryFields.gallery" />
       <div class="flex justify-end mt-8">

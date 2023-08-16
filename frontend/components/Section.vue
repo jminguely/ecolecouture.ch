@@ -49,6 +49,12 @@
           "
           :galleries="row.gallery"
         />
+        <Video
+          v-else-if="
+            row.type == 'Page_Pagefields_sections_Flexiblecontent_Video'
+          "
+          :iframe="row.video"
+        />
         <div v-else>
           <pre>{{ row }}</pre>
         </div>
@@ -65,6 +71,7 @@ import Accordions from './FlexibleContent/Accordions.vue'
 import Slider from './FlexibleContent/Slider.vue'
 import Galleries from './FlexibleContent/Galleries.vue'
 import Testimonials from './FlexibleContent/Testimonials.vue'
+import Video from './FlexibleContent/Video.vue'
 
 const props = defineProps({
   content: {

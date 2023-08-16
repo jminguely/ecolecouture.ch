@@ -61,7 +61,6 @@ query fetchPage($uri: ID!) {
               ... on Galerie {
                 id
                 slug
-                uri
                 galleryFields {
                   gallery {
                     altText
@@ -74,6 +73,10 @@ query fetchPage($uri: ID!) {
                 }
               }
             }
+          }
+          ... on Page_Pagefields_sections_Flexiblecontent_Video {
+            fieldGroupName
+            video
           }
         }
       }

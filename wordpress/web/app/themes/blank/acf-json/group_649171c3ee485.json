@@ -458,7 +458,36 @@
                                     "return_format": "object",
                                     "multiple": 1,
                                     "allow_null": 0,
-                                    "ui": 1
+                                    "ui": 1,
+                                    "bidirectional_target": []
+                                }
+                            ],
+                            "min": "",
+                            "max": ""
+                        },
+                        "layout_64dc703e7b90d": {
+                            "key": "layout_64dc703e7b90d",
+                            "name": "video",
+                            "label": "Video",
+                            "display": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_64dc70447b913",
+                                    "label": "Video",
+                                    "name": "video",
+                                    "aria-label": "",
+                                    "type": "oembed",
+                                    "instructions": "Intégration d'une vidéo via Youtube ou Vimeo",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "show_in_graphql": 1,
+                                    "width": "",
+                                    "height": ""
                                 }
                             ],
                             "min": "",
@@ -569,5 +598,5 @@
     "graphql_field_name": "pageFields",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1692113735
+    "modified": 1692168323
 }

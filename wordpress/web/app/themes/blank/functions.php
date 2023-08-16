@@ -161,6 +161,33 @@ if (!function_exists('react_setup')) :
     }
 
     add_action('init', 'cptui_register_my_cpts_gallery');
+
+
+    add_filter(
+      'wpgraphql_acf_register_graphql_field',
+      function ($return, $type_name, $field_name, $config) {
+        $acf_field = $config['acf_field'] ?? null;
+        $acf_type = $acf_field['type'] ?? null;
+
+        if ($acf_type === "oembed") {
+          $return['resolve'] = function ($root) use ($acf_field) {
+            if (isset($root[$acf_field['key']])) {
+              $value = $root[$acf_field['key']];
+              $embed = @wp_oembed_get($value);
+              if ($embed) {
+                return $embed;
+              }
+            }
+
+            return null;
+          };
+        }
+
+        return $return;
+      },
+      10,
+      4
+    );
   }
 endif;
 add_action('after_setup_theme', 'react_setup');
