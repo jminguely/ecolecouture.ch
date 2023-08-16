@@ -38,7 +38,9 @@ const props = defineProps({
     @screen md {
       columns: 2;
 
-      p {
+      p,
+      ul,
+      ol {
         break-inside: avoid;
       }
 
