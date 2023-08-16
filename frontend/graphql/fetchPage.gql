@@ -14,6 +14,7 @@ query fetchPage($uri: ID!) {
           }
           ... on Page_Pagefields_sections_Flexiblecontent_Richtext {
             richtext
+            twoColumns
           }
           ... on Page_Pagefields_sections_Flexiblecontent_Buttons {
             buttons {
