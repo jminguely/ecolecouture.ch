@@ -28,7 +28,7 @@ useHead({
   bodyAttrs: {
     class: [
       data.value.page.pageSidebarFields.theme &&
-        `section bg-${data.value.page.pageSidebarFields.theme}`,
+        `section theme-${data.value.page.pageSidebarFields.theme} bg-${data.value.page.pageSidebarFields.theme}`,
     ],
   },
 })

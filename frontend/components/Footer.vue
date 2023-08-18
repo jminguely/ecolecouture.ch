@@ -1,5 +1,5 @@
 <template>
-  <footer class="mt-auto p-8 bg-green text-white">
+  <footer class="footer mt-auto p-8 bg-green text-white">
     <div class="max-w-xl mx-auto">
       <nuxt-link :to="header.homeUrl || '/'">
         <img
@@ -8,7 +8,7 @@
           alt="École de Couture - Lehratelier, Fribourg"
         />
       </nuxt-link>
-      <div class="grid grid-cols-2 lg:grid-cols-5 gap-8">
+      <div class="grid grid-cols-2 lg:grid-cols-3 gap-8">
         <div>
           <p class="mb-5">
             Derrière-Les-Rempars 5<br />
@@ -19,21 +19,19 @@
           </p>
           <Navigation location="MENU_SOCIAL" />
         </div>
-        <div class="lg:col-span-2">
+        <div>
           <Navigation location="MENU_FOOTER" />
         </div>
-        <div class="col-span-2">
-          <div class="grid grid-cols-2 gap-x-8">
-            <span class="opacity-60">Conception:</span>
-            <span>eikonlab</span>
-            <span class="opacity-60">Design:</span>
-            <span>Adèle Brodard, Samuel Bouverat</span>
+        <div class="col-span-2 lg:col-span-1">
+          <span class="opacity-60">Conception: </span>
+          <span>eikonlab</span><br />
+          <span class="opacity-60">Design: </span>
+          <span>Adèle Brodard, Samuel Bouverat</span><br />
 
-            <span class="opacity-60">Encadrement:</span>
-            <span> Martial Mingam, Ann Griffin</span>
-            <span class="opacity-60">Développement:</span>
-            <span>Julien Minguely</span>
-          </div>
+          <span class="opacity-60">Encadrement: </span>
+          <span> Martial Mingam, Ann Griffin</span><br />
+          <span class="opacity-60">Développement: </span>
+          <span>Julien Minguely</span><br />
         </div>
       </div>
     </div>

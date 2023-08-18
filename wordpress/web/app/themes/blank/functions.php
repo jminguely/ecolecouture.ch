@@ -162,6 +162,16 @@ if (!function_exists('react_setup')) :
 
     add_action('init', 'cptui_register_my_cpts_gallery');
 
+    add_filter(
+      'theme_page_templates',
+      function ($page_templates, $theme, $post) {
+        $page_templates["y-service-template.php"] = "Homepage";
+        return $page_templates;
+      },
+      11,
+      3
+    );
+
 
     add_filter(
       'wpgraphql_acf_register_graphql_field',

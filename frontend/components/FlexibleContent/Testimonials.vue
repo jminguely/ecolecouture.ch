@@ -19,7 +19,10 @@
       :key="i"
       class="mb-3"
     >
-      <div class="grid md:grid-cols-3 px-14 gap-8 items-center">
+      <div
+        class="grid md:grid-cols-3 gap-8 items-center"
+        :class="[testimonials.length > 1 && 'px-14']"
+      >
         <div>
           <LazyImg
             v-if="testimonial.image.mediaDetails.sizes[0]"

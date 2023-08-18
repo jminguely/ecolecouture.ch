@@ -41,6 +41,11 @@
           d="M0.464,0.001 c0.26,0,0.537,0.177,0.537,0.425 c0,0.248,-0.144,0.575,-0.478,0.575 C0.188,1,0.001,0.766,0.001,0.514 C0.001,0.262,0.204,0.001,0.464,0.001"
         />
       </clipPath>
+      <clipPath id="thumbClip4" clipPathUnits="objectBoundingBox">
+        <path
+          d="M0.999,0.25 c0.007,0.248,-0.057,0.408,-0.166,0.55 C0.725,0.942,0.541,1,0.323,1 C0.104,1,-0.043,0.847,0.011,0.679 c0.055,-0.168,0.127,-0.25,0.311,-0.332 C0.508,0.266,0.493,0.01,0.628,0.002 c0.135,-0.008,0.365,0,0.372,0.248"
+        />
+      </clipPath>
     </defs>
   </svg>
 </template>
@@ -75,10 +80,16 @@
 .thumb-shape-1 {
   clip-path: url(#thumbClip1);
 }
+
 .thumb-shape-2 {
   clip-path: url(#thumbClip2);
 }
+
 .thumb-shape-3 {
   clip-path: url(#thumbClip3);
+}
+
+.thumb-shape-4 {
+  clip-path: url(#thumbClip4);
 }
 </style>

@@ -337,7 +337,7 @@
                                     "max_size": "",
                                     "mime_types": "",
                                     "insert": "append",
-                                    "preview_size": "medium"
+                                    "preview_size": "gallery-vertical"
                                 }
                             ],
                             "min": "",
@@ -439,7 +439,7 @@
                                             "max_height": "",
                                             "max_size": "",
                                             "mime_types": "",
-                                            "preview_size": "medium",
+                                            "preview_size": "thumbnail",
                                             "parent_repeater": "field_64c1274b421bd"
                                         }
                                     ]
@@ -509,6 +509,84 @@
                                     "show_in_graphql": 1,
                                     "width": "",
                                     "height": ""
+                                }
+                            ],
+                            "min": "",
+                            "max": ""
+                        },
+                        "layout_64dfa5266b65f": {
+                            "key": "layout_64dfa5266b65f",
+                            "name": "agenda",
+                            "label": "Agenda",
+                            "display": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_64dfa5326b661",
+                                    "label": "Event",
+                                    "name": "event",
+                                    "aria-label": "",
+                                    "type": "repeater",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "show_in_graphql": 1,
+                                    "layout": "row",
+                                    "min": 0,
+                                    "max": 0,
+                                    "collapsed": "",
+                                    "button_label": "Add event",
+                                    "rows_per_page": 20,
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_64dfa53b6b662",
+                                            "label": "Date",
+                                            "name": "date",
+                                            "aria-label": "",
+                                            "type": "textarea",
+                                            "instructions": "",
+                                            "required": 1,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "show_in_graphql": 1,
+                                            "default_value": "",
+                                            "maxlength": "",
+                                            "rows": 2,
+                                            "placeholder": "",
+                                            "new_lines": "br",
+                                            "parent_repeater": "field_64dfa5326b661"
+                                        },
+                                        {
+                                            "key": "field_64dfa54d6b663",
+                                            "label": "Text",
+                                            "name": "richtext",
+                                            "aria-label": "",
+                                            "type": "wysiwyg",
+                                            "instructions": "",
+                                            "required": 1,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "show_in_graphql": 1,
+                                            "default_value": "",
+                                            "tabs": "all",
+                                            "toolbar": "basic",
+                                            "media_upload": 0,
+                                            "delay": 0,
+                                            "parent_repeater": "field_64dfa5326b661"
+                                        }
+                                    ]
                                 }
                             ],
                             "min": "",
@@ -620,5 +698,5 @@
     "graphql_field_name": "pageFields",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1692192411
+    "modified": 1692379440
 }

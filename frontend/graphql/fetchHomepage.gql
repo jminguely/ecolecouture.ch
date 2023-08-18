@@ -6,6 +6,26 @@ query fetchPage($uri: ID!) {
     pageSidebarFields {
       theme
     }
+    homepageFields {
+      imageLanding {
+        ...MediaItemFragment
+      }
+      imageFormations {
+        ...MediaItemFragment
+      }
+      navigationFormations {
+        __typename
+        ... on Page {
+          id
+          title
+          uri
+        }
+      }
+      textCommandes
+      imageCommandes {
+        ...MediaItemFragment
+      }
+    }
     pageFields {
       sections {
         theme

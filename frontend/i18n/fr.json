@@ -1,5 +1,10 @@
 {
   "more": "Voir plus",
+  "know": "En savoir plus",
+  "homepage": {
+    "formations": "Nos formations",
+    "commandes": "Commandes"
+  },
   "navigation": {
     "open": "Menu",
     "close": "Fermer"

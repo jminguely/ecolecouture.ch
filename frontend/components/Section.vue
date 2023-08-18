@@ -1,5 +1,5 @@
 <template>
-  <div class="section" :class="[`bg-${content.theme}`]">
+  <div class="section" :class="[`theme-${content.theme} bg-${content.theme}`]">
     <div :class="[!content.fullwidth && 'max-w-lg mx-auto px-8 pb-8']">
       <div
         v-for="(row, i) in content.flexiblecontent"
@@ -47,6 +47,12 @@
           "
           :iframe="row.video"
         />
+        <Agenda
+          v-else-if="
+            row.type == 'Page_Pagefields_sections_Flexiblecontent_Agenda'
+          "
+          :events="row.event"
+        />
         <div v-else>
           <pre>{{ row }}</pre>
         </div>
@@ -63,6 +69,7 @@ import Slider from './FlexibleContent/Slider.vue'
 import Galleries from './FlexibleContent/Galleries.vue'
 import Testimonials from './FlexibleContent/Testimonials.vue'
 import Video from './FlexibleContent/Video.vue'
+import Agenda from './FlexibleContent/Agenda.vue'
 
 const props = defineProps({
   content: {
@@ -75,43 +82,44 @@ const props = defineProps({
 <style lang="postcss">
 h1,
 .h1 {
-  .bg-yellow & {
+  .theme-yellow & {
     @apply text-pink;
   }
-  .bg-blue & {
+  .theme-blue & {
     @apply text-pink;
   }
-  .bg-white & {
+  .theme-white & {
     @apply text-red;
   }
-  .bg-lightpink & {
+  .theme-lightpink & {
     @apply text-red;
   }
-  .bg-red & {
+  .theme-red & {
     @apply text-yellow;
   }
 }
 
 h2,
 .h2 {
-  .bg-yellow & {
+  .theme-yellow & {
     @apply text-blue;
   }
-  .bg-blue & {
-    @apply text-pink;
-  }
-  .bg-white & {
+  .theme-blue & {
     @apply text-red;
   }
-  .bg-lightpink & {
+  .theme-white & {
     @apply text-red;
   }
-  .bg-red & {
+  .theme-lightpink & {
+    @apply text-red;
+  }
+  .theme-red & {
     @apply text-yellow;
   }
 }
 
-.bg-blue {
+.theme-red,
+.theme-blue {
   @apply text-white;
 }
 </style>
