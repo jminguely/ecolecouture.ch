@@ -5,7 +5,7 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      wp: process.env.WP_URL,
+      wp: process.env.WP_URL || 'https://api.ecolecouture.ch/',
     },
   },
 
