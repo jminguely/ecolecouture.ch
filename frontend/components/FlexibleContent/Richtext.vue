@@ -8,8 +8,6 @@
 </template>
 
 <script setup>
-const config = useRuntimeConfig()
-
 const props = defineProps({
   richtext: {
     type: String,
@@ -22,10 +20,7 @@ const props = defineProps({
 
 // Parse all URLs and replace the WP domain with the app domain
 const richtextprocessed = computed(() => {
-  const baseUrl = config.public.wp
-  const regex = new RegExp(`(${baseUrl})(?!\app\\/uploads)(\\/.*$)?`, 'g')
-
-  return props.richtext.replace(regex, `/$2`)
+  return useNuxtApp().$processCustomURL(props.richtext)
 })
 </script>
 
