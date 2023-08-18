@@ -224,7 +224,7 @@ function react_widgets_init()
 }
 add_action('widgets_init', 'react_widgets_init');
 
-wp_enqueue_style('style', get_stylesheet_uri());
+// wp_enqueue_style('style', get_stylesheet_uri());
 
 /**
  * Load Jetpack compatibility file.
