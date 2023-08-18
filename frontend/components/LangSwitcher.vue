@@ -2,7 +2,11 @@
   <nav class="pr-5">
     <ul class="flex flex-row gap-5">
       <li v-for="lang in navLocales" :key="lang.code">
-        <NuxtLink v-if="lang.url" class="opacity-50 underline" :to="lang.url">
+        <NuxtLink
+          v-if="lang.url"
+          class="opacity-50 underline pointer-events-auto"
+          :to="lang.url"
+        >
           {{ lang.code }}
         </NuxtLink>
         <span v-else class="h3">{{ lang.code }}</span>

@@ -15,7 +15,7 @@
       <LangSwitcher :available-translations="availableTranslations" />
       <button
         id="menuToggle"
-        class="button button-shape-1 bg-blue text-white hover:bg-blue-darker active:bg-blue-lighter transition-colors"
+        class="button button-shape-1 bg-blue text-white hover:bg-blue-darker active:bg-blue-lighter transition-colors pointer-events-auto"
         @click="emit('updateMenuOpen', !menuOpen)"
       >
         <span v-if="menuOpen">{{ $t('navigation.close') }}</span>
@@ -85,14 +85,14 @@ watch(
 
 <style lang="postcss" scoped>
 .logo-container {
-  @apply max-w-xl mx-auto absolute w-full pointer-events-none z-30;
+  @apply max-w-xl mx-auto absolute w-full z-30;
 
   left: 50%;
   transform: translateX(-50%);
 }
 
 .menu-toggle-container {
-  @apply max-w-xl mx-auto fixed z-50 w-full p-8 flex justify-end items-center;
+  @apply max-w-xl mx-auto fixed z-50 w-full p-8 flex justify-end items-center pointer-events-none;
   left: 50%;
   transform: translateX(-50%);
 }
