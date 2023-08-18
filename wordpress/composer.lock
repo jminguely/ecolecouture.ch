@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4606a9e0ce161cc1ca25939c414e87d6",
+    "content-hash": "c1e89f0ce2fb6d78bc93035d985fb139",
     "packages": [
         {
             "name": "composer/installers",
@@ -479,7 +479,7 @@
         },
         {
             "name": "roots/wordpress",
-            "version": "6.1.1",
+            "version": "6.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/roots/wordpress.git",
@@ -510,16 +510,12 @@
             ],
             "support": {
                 "issues": "https://github.com/roots/wordpress/issues",
-                "source": "https://github.com/roots/wordpress/tree/6.1.1"
+                "source": "https://github.com/roots/wordpress/tree/6.3"
             },
             "funding": [
                 {
                     "url": "https://github.com/roots",
                     "type": "github"
-                },
-                {
-                    "url": "https://www.patreon.com/rootsdev",
-                    "type": "patreon"
                 }
             ],
             "time": "2022-06-01T16:54:37+00:00"
@@ -597,22 +593,22 @@
         },
         {
             "name": "roots/wordpress-no-content",
-            "version": "6.1.1",
+            "version": "6.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WordPress/WordPress.git",
-                "reference": "6.1.1"
+                "reference": "6.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/release/wordpress-6.1.1-no-content.zip",
-                "shasum": "ad2d202747c5356e7b6246fbc339b46aebfa0665"
+                "url": "https://downloads.wordpress.org/release/wordpress-6.3-no-content.zip",
+                "shasum": "beb2a89525274d08fae06bf4bf5bc0cfdcb5b1f5"
             },
             "require": {
-                "php": ">= 5.6.20"
+                "php": ">= 7.0.0"
             },
             "provide": {
-                "wordpress/core-implementation": "6.1.1"
+                "wordpress/core-implementation": "6.3"
             },
             "suggest": {
                 "ext-curl": "Performs remote request operations.",
@@ -663,7 +659,7 @@
                     "type": "other"
                 }
             ],
-            "time": "2022-11-15T19:14:34+00:00"
+            "time": "2023-08-08T19:41:46+00:00"
         },
         {
             "name": "roots/wp-config",
@@ -1332,12 +1328,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "8d05c4f2d63f4d95c9db14599f58872f704a72a9"
+                "reference": "7a0792500b5d9f0b4d81fba229b191e747bd2ef2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/8d05c4f2d63f4d95c9db14599f58872f704a72a9",
-                "reference": "8d05c4f2d63f4d95c9db14599f58872f704a72a9",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/7a0792500b5d9f0b4d81fba229b191e747bd2ef2",
+                "reference": "7a0792500b5d9f0b4d81fba229b191e747bd2ef2",
                 "shasum": ""
             },
             "conflict": {
@@ -1406,7 +1402,7 @@
                 "centreon/centreon": "<22.10.0.0-beta1",
                 "cesnet/simplesamlphp-module-proxystatistics": "<3.1",
                 "chriskacerguis/codeigniter-restserver": "<=2.7.1",
-                "cockpit-hq/cockpit": "<2.6.3",
+                "cockpit-hq/cockpit": "<=2.6.3",
                 "codeception/codeception": "<3.1.3|>=4,<4.1.22",
                 "codeigniter/framework": "<3.1.9",
                 "codeigniter4/framework": "<4.3.5",
@@ -1486,8 +1482,8 @@
                 "firebase/php-jwt": "<6",
                 "fixpunkt/fp-masterquiz": "<2.2.1|>=3,<3.5.2",
                 "fixpunkt/fp-newsletter": "<1.1.1|>=2,<2.1.2|>=2.2,<3.2.6",
-                "flarum/core": "<1.7",
-                "flarum/framework": "<=0.1.0.0-beta7.1",
+                "flarum/core": "<1.8",
+                "flarum/framework": "<1.8",
                 "flarum/mentions": "<1.6.3",
                 "flarum/sticky": ">=0.1.0.0-beta14,<=0.1.0.0-beta15",
                 "flarum/tags": "<=0.1.0.0-beta13",
@@ -1577,6 +1573,7 @@
                 "kitodo/presentation": "<3.2.3|>=3.3,<3.3.4",
                 "klaviyo/magento2-extension": ">=1,<3",
                 "knplabs/knp-snappy": "<1.4.2",
+                "kohana/core": "<3.3.3",
                 "krayin/laravel-crm": "<1.2.2",
                 "kreait/firebase-php": ">=3.2,<3.8.1",
                 "la-haute-societe/tcpdf": "<6.2.22",
@@ -1835,7 +1832,7 @@
                 "symfony/var-exporter": ">=4.2,<4.2.12|>=4.3,<4.3.8",
                 "symfony/web-profiler-bundle": ">=2,<2.3.19|>=2.4,<2.4.9|>=2.5,<2.5.4",
                 "symfony/yaml": ">=2,<2.0.22|>=2.1,<2.1.7",
-                "t3/dce": ">=2.2,<2.6.2",
+                "t3/dce": "<0.11.5|>=2.2,<2.6.2",
                 "t3g/svg-sanitizer": "<1.0.3",
                 "tastyigniter/tastyigniter": "<3.3",
                 "tcg/voyager": "<=1.4",
@@ -1982,7 +1979,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-08-14T21:04:03+00:00"
+            "time": "2023-08-17T20:04:28+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",
