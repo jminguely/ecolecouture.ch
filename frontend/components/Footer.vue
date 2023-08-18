@@ -13,7 +13,9 @@
           <p class="mb-5">
             Derrière-Les-Rempars 5<br />
             1700 Fribourg<br />
-            info@ecolecouture.ch
+            <a class="underline" href="mailto:info@ecolecouture.ch">
+              info@ecolecouture.ch
+            </a>
           </p>
           <Navigation location="MENU_SOCIAL" />
         </div>
@@ -21,18 +23,16 @@
           <Navigation location="MENU_FOOTER" />
         </div>
         <div class="col-span-2">
-          <div class="grid grid-cols-2 lg:grid-cols-3 gap-x-8">
+          <div class="grid grid-cols-2 gap-x-8">
             <span class="opacity-60">Conception:</span>
-            <span class="lg:col-span-2">eikonlab</span>
+            <span>eikonlab</span>
             <span class="opacity-60">Design:</span>
-            <span class="lg:col-span-2">Adèle Brodard, Samuel Bouverat</span>
+            <span>Adèle Brodard, Samuel Bouverat</span>
 
             <span class="opacity-60">Encadrement:</span>
-            <span class="lg:col-span-2">
-              Martial Mingam, Ann Griffin, Julien Minguely
-            </span>
-            <span class="opacity-60">Développement web:</span>
-            <span class="lg:col-span-2">Julien Minguely</span>
+            <span> Martial Mingam, Ann Griffin</span>
+            <span class="opacity-60">Développement:</span>
+            <span>Julien Minguely</span>
           </div>
         </div>
       </div>
