@@ -24,11 +24,19 @@ html {
   line-height: 1.25;
 }
 
+body {
+  /* Responsive font-size generated with
+  https://clamp.font-size.app
+  640px // 1920px // 18px // 24px */
+  font-size: clamp(1.125rem, 0.9375rem + 0.4688vw, 1.5rem);
+}
+
 h1,
 .h1 {
   @apply antialiased font-sans font-normal;
 
-  font-size: 2.85rem;
+  /* 640px // 1920px // 35px // 66px */
+  font-size: clamp(2.1875rem, 1.2188rem + 2.4219vw, 4.125rem);
   letter-spacing: 0.05em;
   line-height: 0.98em;
 }
@@ -37,7 +45,8 @@ h2,
 .h2 {
   @apply font-heading font-bold mb-6;
 
-  font-size: 1.57rem;
+  /* 640px // 1920px // 28px // 40px */
+  font-size: clamp(1.75rem, 1.375rem + 0.9375vw, 2.5rem);
   letter-spacing: 0.05em;
   line-height: 1.1;
 }
@@ -45,7 +54,8 @@ h2,
 h3,
 .h3 {
   @apply font-sans font-semibold mb-3;
-  font-size: 1rem;
+
+  font-size: clamp(1.125rem, 0.9375rem + 0.4688vw, 1.5rem);
   letter-spacing: 0;
   line-height: 1em;
 }
