@@ -38,7 +38,7 @@ h1,
   /* 640px // 1920px // 35px // 66px */
   font-size: clamp(2.1875rem, 1.2188rem + 2.4219vw, 4.125rem);
   letter-spacing: 0.05em;
-  line-height: 0.98em;
+  line-height: 1;
 }
 
 h2,
@@ -61,6 +61,6 @@ h3,
 }
 
 .underline {
-  text-decoration-thickness: 0.075em;
+  text-decoration-thickness: 0.05em;
   text-underline-offset: 0.1em;
 }
