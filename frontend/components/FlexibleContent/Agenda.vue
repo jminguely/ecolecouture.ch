@@ -54,7 +54,7 @@ const props = defineProps({
     }
 
     .event-text {
-      @apply pl-5;
+      @apply pl-12;
     }
   }
 }

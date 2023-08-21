@@ -52,7 +52,7 @@
 
 <style lang="postcss">
 .button {
-  padding: 1rem;
+  padding: 0.75em 1.25em;
   text-decoration: none;
   display: inline-block;
 }

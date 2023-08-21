@@ -6,7 +6,7 @@
     "commandes": "Bestellungen"
   },
   "navigation": {
-    "open": "Menu",
-    "close": "Schliessen"
+    "open": "Menü",
+    "close": "X"
   }
 }

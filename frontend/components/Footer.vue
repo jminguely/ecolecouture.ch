@@ -8,7 +8,7 @@
           alt="École de Couture - Lehratelier, Fribourg"
         />
       </nuxt-link>
-      <div class="grid grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
         <div>
           <p class="mb-5">
             Derrière-Les-Rempars 5<br />
@@ -22,7 +22,7 @@
         <div>
           <Navigation location="MENU_FOOTER" />
         </div>
-        <div class="col-span-2 lg:col-span-1">
+        <div class="sm:col-span-2 lg:col-span-1">
           <span class="opacity-60">Conception: </span>
           <span>eikonlab</span><br />
           <span class="opacity-60">Design: </span>
