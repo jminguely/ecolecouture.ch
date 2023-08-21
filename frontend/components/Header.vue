@@ -15,7 +15,7 @@
       <LangSwitcher :available-translations="availableTranslations" />
       <button
         id="menuToggle"
-        class="button button-shape-1 bg-blue text-white hover:bg-blue-darker active:bg-blue-lighter transition-colors pointer-events-auto"
+        class="button button-shape-1 bg-turquoise text-black hover:bg-turquoise-darker active:bg-turquoise-lighter transition-colors pointer-events-auto"
         @click="emit('updateMenuOpen', !menuOpen)"
       >
         <span v-if="menuOpen">{{ $t('navigation.close') }}</span>

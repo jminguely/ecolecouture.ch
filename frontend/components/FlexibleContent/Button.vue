@@ -1,5 +1,5 @@
 <template>
-  <a
+  <nuxt-link
     class="button"
     :class="[
       `bg-${button.color} hover:bg-${button.color}-darker active:bg-${button.color}-lighter`,
@@ -9,7 +9,7 @@
     :target="button.link.target"
   >
     {{ button.link.title }}
-  </a>
+  </nuxt-link>
 </template>
 
 <script setup>
