@@ -1,9 +1,24 @@
 <template>
   <div>
-    <swiper class="relative" slides-per-view="3" centered-slides loop>
+    <swiper
+      :modules="modules"
+      class="relative"
+      slides-per-view="3"
+      centered-slides
+      initial-slide="1"
+      :pagination="{ clickable: true }"
+      :style="{
+        '--swiper-pagination-bullet-size': '10px',
+        '--swiper-pagination-bullet-inactive-opacity': '1',
+        '--swiper-pagination-bullet-inactive-color': 'transparent',
+        '--swiper-pagination-color': 'currentColor',
+        '--swiper-pagination-bottom': '0',
+      }"
+      @swiper="onSwiper"
+    >
       <slider-prev-arrow class="left-0" />
       <slider-next-arrow class="right-0" />
-      <swiper-slide v-for="(image, i) in images" :key="i">
+      <swiper-slide v-for="(image, i) in images" :key="i" class="mb-10">
         <LazyImg
           v-if="image.mediaDetails.sizes[0]"
           class="w-full"

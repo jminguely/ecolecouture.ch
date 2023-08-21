@@ -13,6 +13,7 @@ module.exports = {
   plugins: [],
   rules: {
     'vue/no-v-html': 0,
+    'vue/no-v-for-template-key': 'off',
     'vue/html-self-closing': 0,
     'no-unused-components': 0,
     'selector-anb-no-unmatchable': 0,

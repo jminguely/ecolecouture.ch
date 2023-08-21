@@ -1,22 +1,13 @@
 <template>
-  <div>
-    <templat
-      v-for="event in events"
-      :key="event.id"
-      class="event grid sm:grid-cols-3 md:grid-cols-5 py-5 gap-x-8"
-    >
-      <div v-html="event.date"></div>
-      <Richtext
-        class="sm:col-span-2 md:col-span-4"
-        :richtext="event.richtext"
-      />
-    </templat>
+  <div class="agenda">
+    <template v-for="event in events" :key="event.id">
+      <div class="event-date" v-html="event.date"></div>
+      <div class="event-text" v-html="event.richtext" />
+    </template>
   </div>
 </template>
 
 <script setup>
-import Richtext from './Richtext.vue'
-
 const props = defineProps({
   events: {
     type: Array,
@@ -31,6 +22,40 @@ const props = defineProps({
 
   &:last-child {
     border-bottom: none;
+  }
+}
+
+.agenda {
+  display: grid;
+  grid-template-columns: auto;
+
+  .event-date {
+    @apply pt-5;
+  }
+
+  .event-text {
+    @apply border-b pb-5;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  @screen md {
+    grid-template-columns: min-content auto;
+
+    .event-date,
+    .event-text {
+      @apply border-b py-5;
+
+      &:nth-last-child(-n + 2) {
+        border-bottom: none;
+      }
+    }
+
+    .event-text {
+      @apply pl-5;
+    }
   }
 }
 </style>

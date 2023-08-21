@@ -1,8 +1,9 @@
 <template>
   <swiper
+    :modules="modules"
     class="relative"
     slides-per-view="1"
-    pagination
+    :pagination="{ clickable: true }"
     auto-height
     :style="{
       '--swiper-pagination-bullet-size': '10px',
@@ -16,6 +17,7 @@
       960: { slidesPerView: 3 },
       1280: { slidesPerView: 4 },
     }"
+    @swiper="onSwiper"
   >
     <slider-prev-arrow class="left-5" />
     <slider-next-arrow class="right-5" />
@@ -56,7 +58,11 @@ export default {
     },
   },
   setup() {
+    const onSwiper = (swiper) => {
+      console.log(swiper)
+    }
     return {
+      onSwiper,
       modules: [Pagination],
     }
   },

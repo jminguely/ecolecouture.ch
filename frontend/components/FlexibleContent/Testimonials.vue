@@ -1,9 +1,10 @@
 <template>
   <swiper
+    :modules="modules"
     class="relative"
     slides-per-view="1"
     auto-height
-    pagination
+    :pagination="{ clickable: true }"
     :style="{
       '--swiper-pagination-bullet-size': '10px',
       '--swiper-pagination-bullet-inactive-opacity': '1',
@@ -11,6 +12,7 @@
       '--swiper-pagination-color': 'currentColor',
       '--swiper-pagination-bottom': '20px',
     }"
+    @swiper="onSwiper"
   >
     <slider-prev-arrow class="left-0" />
     <slider-next-arrow class="right-0" />
@@ -32,7 +34,7 @@
             :src="`${testimonial.image.mediaDetails.sizes[0].sourceUrl}`"
           />
         </div>
-        <div class="md:col-span-2 py-1">
+        <div class="md:col-span-2 py-10">
           <h3 class="h2">{{ testimonial.title }}</h3>
           <Richtext :richtext="testimonial.text" />
         </div>
@@ -69,8 +71,12 @@ export default {
     },
   },
   setup() {
+    const onSwiper = (swiper) => {
+      console.log(swiper)
+    }
     return {
-      modules: [Navigation, Pagination],
+      onSwiper,
+      modules: [Pagination],
     }
   },
 }
