@@ -118,6 +118,13 @@ h2,
   }
 }
 
+h3,
+.h3 {
+  .theme-yellow & {
+    @apply text-red;
+  }
+}
+
 .theme-red,
 .theme-blue {
   @apply text-white;

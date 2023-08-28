@@ -1,14 +1,18 @@
 <template>
   <div v-if="data?.page">
-    <div class="max-w-xl mx-auto px-8 pt-48 flex flex-col relative">
+    <div class="max-w-xl mx-auto px-8 pt-32 sm:pt-48 pb-8 relative">
       <LazyImg
         v-if="data.page.homepageFields.imageLanding?.mediaDetails?.sizes[0]"
         class="landing-img thumb-shape-4"
         :alt="data.page.homepageFields.imageLanding.altText"
         :src="`${data.page.homepageFields.imageLanding.mediaDetails.sizes[0].sourceUrl}`"
       />
-      <span class="font-huge text-blue self-end z-10">École</span>
-      <span class="font-huge text-blue z-10">de Couture</span>
+      <div class="flex flex-col">
+        <span class="font-huge text-blue mt-10 sm:mt-0 sm:self-end z-10"
+          >École</span
+        >
+        <span class="font-huge text-blue z-10">de Couture</span>
+      </div>
     </div>
     <section class="bg-red theme-red">
       <div class="max-w-lg mx-auto pt-16 p-8">
@@ -123,18 +127,23 @@ if (data?.value?.page?.translations?.length > 0) {
 
 <style lang="postcss" scoped>
 .font-huge {
-  font-size: clamp(6.5rem, -0.0625rem + 16.4063vw, 19.625rem);
   line-height: 1;
+
+  font-size: 50px;
+
+  @screen sm {
+    font-size: clamp(6.5rem, -0.0625rem + 16.4063vw, 19.625rem);
+  }
 }
 
 .landing-img {
-  @apply w-96;
-  position: absolute;
-
-  width: clamp(15rem, 0rem + 37.5vw, 45rem);
-  top: 5%;
-  left: 35%;
-  z-index: 0;
-  transform: translate(-50%, 0);
+  @screen sm {
+    @apply w-96 sm:absolute;
+    width: clamp(15rem, 0rem + 37.5vw, 45rem);
+    top: 5%;
+    left: 35%;
+    z-index: 0;
+    transform: translate(-50%, 0);
+  }
 }
 </style>

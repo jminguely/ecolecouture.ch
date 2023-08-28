@@ -62,6 +62,7 @@ query fetchPage($uri: ID!) {
                 slug
                 uri
                 title
+                content
                 galleryFields {
                   gallery {
                     altText

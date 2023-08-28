@@ -4,7 +4,7 @@
       <h1 class="inline-block">
         <nuxt-link :to="header.homeUrl || '/'" class="pointer-events-auto">
           <img
-            class="w-48 header-logo"
+            class="w-32 sm:w-48 header-logo"
             src="../assets/img/logo-ecolecouture.png"
             alt="École de Couture - Lehratelier, Fribourg"
           />
@@ -26,7 +26,7 @@
       <div class="logo-container">
         <nuxt-link :to="header.homeUrl || '/'">
           <img
-            class="brightness-0 invert w-48 m-8"
+            class="brightness-0 invert w-32 sm:w-48 m-8"
             src="../assets/img/logo-ecolecouture.png"
             alt="École de Couture - Lehratelier, Fribourg"
           />
@@ -92,9 +92,13 @@ watch(
 }
 
 .menu-toggle-container {
-  @apply max-w-xl mx-auto fixed z-50 w-full p-8 flex justify-end items-center pointer-events-none;
+  @apply max-w-xl mx-auto fixed z-50 w-full p-8 pointer-events-none flex justify-end items-end flex-col-reverse;
   left: 50%;
   transform: translateX(-50%);
+
+  @screen sm {
+    @apply flex-row justify-end items-center;
+  }
 }
 .nav-container {
   position: fixed;

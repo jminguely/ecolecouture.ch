@@ -3,7 +3,7 @@
     <div class="max-w-xl mx-auto">
       <nuxt-link :to="header.homeUrl || '/'">
         <img
-          class="w-48 brightness-0 invert mb-10"
+          class="w-32 sm:w-48 brightness-0 invert mb-10"
           src="../assets/img/logo-ecolecouture.png"
           alt="École de Couture - Lehratelier, Fribourg"
         />
@@ -49,3 +49,9 @@ watch(locale, async () => {
   header.homeUrl = locales.value.find((i) => i.code === locale.value).homeUrl
 })
 </script>
+
+<style>
+footer {
+  font-size: clamp(0.875rem, 0.75rem + 0.3125vw, 1.125rem);
+}
+</style>

@@ -70,6 +70,10 @@ export default {
 </script>
 
 <style>
+.swiper {
+  /* Removes 1px to the bottom to avoid the white line at the bottom of the slider */
+  margin-bottom: -1px;
+}
 .swiper-pagination-bullet {
   border: 1px solid currentColor;
 }
