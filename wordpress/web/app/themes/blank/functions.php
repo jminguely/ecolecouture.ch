@@ -81,7 +81,7 @@ if (!function_exists('react_setup')) :
 
     function timymcd_block_formats($arr)
     {
-      $arr['block_formats'] = 'Paragraph=p;Heading 2=h2;Heading 3=h3;';
+      $arr['block_formats'] = 'Paragraph=p;Heading 2=h2;Heading 3=h3;Heading 4=h4;';
       return $arr;
     }
     add_filter('tiny_mce_before_init', 'timymcd_block_formats');
