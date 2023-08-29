@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer mt-auto p-8 bg-green text-white">
+  <footer class="footer mt-auto p-8 bg-green text-white text-sm">
     <div class="max-w-xl mx-auto">
       <nuxt-link :to="header.homeUrl || '/'">
         <img
@@ -49,9 +49,3 @@ watch(locale, async () => {
   header.homeUrl = locales.value.find((i) => i.code === locale.value).homeUrl
 })
 </script>
-
-<style>
-footer {
-  font-size: clamp(0.875rem, 0.75rem + 0.3125vw, 1.125rem);
-}
-</style>
