@@ -28,6 +28,7 @@ const buttonLinkProcessed = computed(() => {
 
 <style lang="postcss" scoped>
 .button.bg-pink,
+.button.bg-electricblue,
 .button.bg-blue {
   @apply text-white;
 }

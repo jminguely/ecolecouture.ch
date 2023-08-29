@@ -77,7 +77,7 @@
               </p>
             </div>
             <nuxt-link
-              class="button button-shape-1 text-white bg-blue hover:bg-blue-darker active:bg-blue-lighter"
+              class="button button-shape-1 text-white bg-electricblue hover:bg-electricblue-darker active:bg-electricblue-lighter"
               to="/commandes"
             >
               {{ $t('know') }}

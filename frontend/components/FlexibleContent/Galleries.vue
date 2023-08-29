@@ -5,7 +5,7 @@
         <h2 class="mb-0">{{ gallery.title }}</h2>
         <nuxt-link
           :to="gallery.uri"
-          class="button bg-blue text-white inline-block"
+          class="button bg-electricblue text-white inline-block"
           :class="[`button-shape-${$getRandomInt(5)}`]"
         >
           {{ $t('more') }}

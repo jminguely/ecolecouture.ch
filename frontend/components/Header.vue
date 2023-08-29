@@ -76,6 +76,7 @@ watch(
 <style lang="postcss">
 .header-logo {
   body.bg-yellow &,
+  body.bg-electricblue &,
   body.bg-blue &,
   body.bg-red &,
   body.bg-pink & {
