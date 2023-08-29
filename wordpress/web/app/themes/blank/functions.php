@@ -18,6 +18,13 @@ if (!function_exists('react_setup')) :
    */
   function react_setup()
   {
+    //creating functions post_remove for removing menu item
+    function post_remove()
+    {
+      remove_menu_page('edit.php');
+    }
+
+    add_action('admin_menu', 'post_remove');
 
     // Add default posts and comments RSS feed links to head.
     add_theme_support('automatic-feed-links');
