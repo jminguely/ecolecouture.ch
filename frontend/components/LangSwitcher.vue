@@ -9,7 +9,7 @@
         >
           {{ lang.code }}
         </NuxtLink>
-        <span>{{ lang.code }}</span>
+        <span v-else>{{ lang.code }}</span>
       </li>
     </ul>
   </nav>
