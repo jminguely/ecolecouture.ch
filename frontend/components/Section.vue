@@ -15,7 +15,6 @@
             row.type == 'Page_Pagefields_sections_Flexiblecontent_Richtext'
           "
           :richtext="row.richtext"
-          :two-columns="row.twoColumns"
         />
         <Accordions
           v-else-if="
@@ -83,7 +82,7 @@ const props = defineProps({
 h1,
 .h1 {
   .theme-yellow & {
-    @apply text-pink;
+    @apply text-red;
   }
   .theme-blue & {
     @apply text-pink;

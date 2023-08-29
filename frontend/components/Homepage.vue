@@ -8,10 +8,12 @@
         :src="`${data.page.homepageFields.imageLanding.mediaDetails.sizes[0].sourceUrl}`"
       />
       <div class="flex flex-col">
-        <span class="font-huge text-blue mt-10 sm:mt-0 sm:self-end z-10"
-          >École</span
+        <span
+          class="font-huge text-electricblue mt-10 sm:mt-0 sm:self-end z-10"
         >
-        <span class="font-huge text-blue z-10">de Couture</span>
+          École
+        </span>
+        <span class="font-huge text-electricblue z-10">de Couture</span>
       </div>
     </div>
     <section class="bg-red theme-red">

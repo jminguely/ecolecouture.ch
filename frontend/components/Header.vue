@@ -15,7 +15,7 @@
       <LangSwitcher :available-translations="availableTranslations" />
       <button
         id="menuToggle"
-        class="button button-shape-1 bg-turquoise text-black hover:bg-turquoise-darker active:bg-turquoise-lighter transition-colors pointer-events-auto"
+        class="button button-shape-1 bg-electricblue text-white transition-colors pointer-events-auto"
         @click="emit('updateMenuOpen', !menuOpen)"
       >
         <span v-if="menuOpen">{{ $t('navigation.close') }}</span>
@@ -75,6 +75,7 @@ watch(
 
 <style lang="postcss">
 .header-logo {
+  body.bg-yellow &,
   body.bg-blue &,
   body.bg-red &,
   body.bg-pink & {

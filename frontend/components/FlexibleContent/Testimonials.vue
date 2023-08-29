@@ -3,7 +3,6 @@
     :modules="modules"
     class="relative"
     slides-per-view="1"
-    auto-height
     :pagination="{ clickable: true }"
     :style="{
       '--swiper-pagination-bullet-size': '10px',

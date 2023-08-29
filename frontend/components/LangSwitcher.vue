@@ -1,6 +1,6 @@
 <template>
   <nav class="pr-3 sm:pr-5 pt-2 sm:pt-0 text-sm">
-    <ul class="flex flex-row gap-3">
+    <ul class="flex flex-row gap-2">
       <li v-for="lang in navLocales" :key="lang.code">
         <NuxtLink
           v-if="lang.url"

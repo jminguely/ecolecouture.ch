@@ -6,11 +6,13 @@ query fetchMenu($lang: LanguageCodeFilterEnum, $location: MenuLocationEnum) {
       id
       label
       uri
+      cssClasses
       childItems {
         nodes {
           id
           label
           uri
+          cssClasses
         }
       }
     }

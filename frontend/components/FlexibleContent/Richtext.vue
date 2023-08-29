@@ -1,10 +1,5 @@
 <template>
-  <div
-    class="richtext"
-    v-bind="$attrs"
-    :class="[twoColumns && 'two-columns']"
-    v-html="richtextprocessed"
-  ></div>
+  <div class="richtext" v-bind="$attrs" v-html="richtextprocessed"></div>
 </template>
 
 <script setup>
@@ -12,9 +7,6 @@ const props = defineProps({
   richtext: {
     type: String,
     required: true,
-  },
-  twoColumns: {
-    type: Boolean,
   },
 })
 
@@ -41,23 +33,6 @@ const richtextprocessed = computed(() => {
 
   a {
     @apply underline;
-  }
-
-  &.two-columns {
-    @screen md {
-      columns: 2;
-
-      p,
-      ul,
-      ol {
-        break-inside: avoid;
-      }
-
-      h2,
-      h3 {
-        break-after: avoid;
-      }
-    }
   }
 }
 </style>

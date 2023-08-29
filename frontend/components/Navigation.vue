@@ -2,7 +2,12 @@
   <nav v-bind="$attrs">
     <ul class="text-white">
       <li v-for="menuItem in menu.menuItems?.nodes" :key="menuItem.id">
-        <nuxt-link v-if="menuItem.uri" class="underline" :to="menuItem.uri">
+        <nuxt-link
+          v-if="menuItem.uri"
+          class="underline"
+          :to="menuItem.uri"
+          :class="menuItem.cssClasses.join(' ')"
+        >
           {{ menuItem.label }}
         </nuxt-link>
         <span v-else>
@@ -13,7 +18,11 @@
             v-for="subMenuItem in menuItem.childItems?.nodes"
             :key="subMenuItem.id"
           >
-            <nuxt-link class="underline" :to="subMenuItem.uri">
+            <nuxt-link
+              class="underline"
+              :to="subMenuItem.uri"
+              :class="subMenuItem.cssClasses.join(' ')"
+            >
               {{ subMenuItem.label }}
             </nuxt-link>
           </li>
@@ -56,12 +65,16 @@ watch(locale, async () => {
 .h1 {
   .sub-nav {
     margin-left: 1.75em;
-    margin-top: 0.5em;
+    margin-top: 0.25em;
     margin-bottom: 0.5em;
+
+    li {
+      margin-bottom: 0.5em;
+    }
   }
 
   li {
-    margin-bottom: 0.75em;
+    margin-bottom: 0.25em;
   }
 }
 </style>

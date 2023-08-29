@@ -1,7 +1,7 @@
 <template>
   <div v-if="data?.page">
     <div class="max-w-lg mx-auto px-8 pt-36">
-      <h2 class="h1 w-2/3">{{ data.page.title }}</h2>
+      <h2 class="h1 lg:w-2/3">{{ data.page.title }}</h2>
     </div>
     <Section
       v-for="(section, i) in data.page.pageFields.sections"

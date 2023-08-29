@@ -8,7 +8,8 @@
           alt="École de Couture - Lehratelier, Fribourg"
         />
       </nuxt-link>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
         <div>
           <p class="mb-5">
             Derrière-Les-Rempars 5<br />
@@ -19,20 +20,28 @@
           </p>
           <Navigation location="MENU_SOCIAL" />
         </div>
+
+        <div>
+          <nuxt-link
+            class="button button-shape-1 bg-yellow text-black"
+            to="interne"
+          >
+            Espace élèves
+          </nuxt-link>
+        </div>
+
         <div>
           <Navigation location="MENU_FOOTER" />
         </div>
-        <div class="sm:col-span-2 lg:col-span-1">
-          <span class="opacity-60">Conception: </span>
-          <span>eikonlab</span><br />
-          <span class="opacity-60">Design: </span>
-          <span>Adèle Brodard, Samuel Bouverat</span><br />
-
-          <span class="opacity-60">Encadrement: </span>
-          <span> Martial Mingam, Ann Griffin</span><br />
-          <span class="opacity-60">Développement: </span>
-          <span>Julien Minguely</span><br />
-        </div>
+      </div>
+      <div class="sm:col-span-2 lg:col-span-1">
+        Design et concept | eikonlab: Adèle Brodard, Samuel Bouverat<br />
+        Suivi de projet et encadrement: Martial Mingam, Ann Griffin, Julien
+        Minguely<br />
+        Développement: Julien Minguely<br />
+        Photographies: xxx<br />
+        Redaction textes: xxx<br />
+        Traduction allemande: xxx
       </div>
     </div>
   </footer>

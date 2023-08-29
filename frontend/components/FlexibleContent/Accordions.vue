@@ -13,7 +13,7 @@
         </span>
       </button>
       <VueAccordion :expanded="accordion.expanded">
-        <div class="pt-3 pl-14">
+        <div class="pb-1 pl-14">
           <Richtext :richtext="accordion.richtext" />
         </div>
       </VueAccordion>
