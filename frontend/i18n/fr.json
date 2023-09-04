@@ -8,5 +8,9 @@
   "navigation": {
     "open": "Menu",
     "close": "X"
+  },
+  "footer": {
+    "espaceeleves": "Menu",
+    "espaceelevesurl": "https://google.fr"
   }
 }

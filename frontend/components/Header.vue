@@ -94,13 +94,9 @@ watch(
 }
 
 .menu-toggle-container {
-  @apply max-w-xl mx-auto fixed z-50 w-full p-8 pointer-events-none flex justify-end items-end flex-col-reverse;
+  @apply max-w-xl mx-auto fixed z-50 w-full p-8 pointer-events-none flex justify-end flex-row justify-end items-center;
   left: 50%;
   transform: translateX(-50%);
-
-  @screen sm {
-    @apply flex-row justify-end items-center;
-  }
 }
 .nav-container {
   position: fixed;

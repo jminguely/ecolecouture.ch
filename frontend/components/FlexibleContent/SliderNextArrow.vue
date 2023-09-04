@@ -1,7 +1,7 @@
 <template>
   <button
     v-bind="$attrs"
-    class="absolute top-1/2 z-10 transition-opacity transition-500"
+    class="absolute bottom-5 md:bottom-1/2 z-10 transition-opacity transition-500"
     :class="[swiper.isEnd && ' opacity-0']"
     @click="swiper.slideNext()"
   >

@@ -24,9 +24,9 @@
         <div>
           <nuxt-link
             class="button button-shape-1 bg-yellow text-black"
-            to="interne"
+            :to="$t('footer.espaceelevesurl')"
           >
-            Espace élèves
+            {{ $t('footer.espaceeleves') }}
           </nuxt-link>
         </div>
 

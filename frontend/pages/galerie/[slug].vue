@@ -17,6 +17,7 @@
           :alt="image.altText"
           :src="`${image.mediaDetails.sizes[0].sourceUrl}`"
         />
+        <div class="mt-2 mb-3 text-sm" v-html="image.description"></div>
       </div>
     </div>
   </div>

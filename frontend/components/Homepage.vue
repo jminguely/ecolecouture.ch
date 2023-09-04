@@ -19,7 +19,7 @@
     <section class="bg-red theme-red">
       <div class="max-w-lg mx-auto pt-16 p-8">
         <div
-          class="flex flex-col md:flex-row gap-10 md:items-center justify-between"
+          class="flex flex-col md:flex-row gap-10 md:items-center justify-betwee clear-both"
         >
           <div class="md:order-1 md:w-1/3">
             <LazyImg
@@ -68,7 +68,7 @@
               :src="`${data.page.homepageFields.imageCommandes.mediaDetails.sizes[0].sourceUrl}`"
             />
           </div>
-          <div class="">
+          <div>
             <div class="richtext">
               <h2>{{ $t('homepage.commandes') }}</h2>
               <p>
@@ -139,8 +139,9 @@ if (data?.value?.page?.translations?.length > 0) {
 }
 
 .landing-img {
+  @apply w-3/5 float-right mb-10;
   @screen sm {
-    @apply w-96 sm:absolute;
+    @apply sm:absolute;
     width: clamp(15rem, 0rem + 37.5vw, 45rem);
     top: 5%;
     left: 35%;
