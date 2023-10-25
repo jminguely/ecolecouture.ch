@@ -22,26 +22,36 @@
         </div>
 
         <div>
-          <nuxt-link
-            class="button button-shape-1 bg-yellow text-black"
-            :to="$t('footer.espaceelevesurl')"
-          >
-            {{ $t('footer.espaceeleves') }}
-          </nuxt-link>
-        </div>
-
-        <div>
           <Navigation location="MENU_FOOTER" />
         </div>
-      </div>
-      <div class="sm:col-span-2 lg:col-span-1">
-        Design et concept | eikonlab: Adèle Brodard, Samuel Bouverat<br />
-        Suivi de projet et encadrement: Martial Mingam, Ann Griffin, Julien
-        Minguely<br />
-        Développement: Julien Minguely<br />
-        Photographies: xxx<br />
-        Redaction textes: xxx<br />
-        Traduction allemande: xxx
+        <div class="sm:col-span-2 lg:col-span-2">
+          <table class="gap-x-2">
+            <tr>
+              <td class="pr-2 opacity-50">Design et concept</td>
+              <td>eikonlab | Adèle Brodard, Samuel Bouverat</td>
+            </tr>
+            <tr>
+              <td class="pr-2 opacity-50">Encadrement:</td>
+              <td>Martial Mingam, Ann Griffin, Julien Minguely</td>
+            </tr>
+            <tr>
+              <td class="pr-2 opacity-50">Développement:</td>
+              <td>Julien Minguely</td>
+            </tr>
+            <tr>
+              <td class="pr-2 opacity-50">Photographies:</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="pr-2 opacity-50">Redaction textes:</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="pr-2 opacity-50">Traduction allemande:</td>
+              <td></td>
+            </tr>
+          </table>
+        </div>
       </div>
     </div>
   </footer>

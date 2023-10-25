@@ -249,3 +249,10 @@ add_action('widgets_init', 'react_widgets_init');
 if (defined('JETPACK__VERSION')) {
   require get_template_directory() . '/inc/jetpack.php';
 }
+
+// Removes the comment from the admin menu
+add_action('admin_init', 'my_remove_admin_menus');
+function my_remove_admin_menus()
+{
+  remove_menu_page('edit-comments.php');
+}
