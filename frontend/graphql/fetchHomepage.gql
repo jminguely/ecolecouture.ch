@@ -32,9 +32,6 @@ query fetchPage($uri: ID!) {
         fullwidth
         flexiblecontent {
           type: __typename
-          ... on Page_Pagefields_sections_Flexiblecontent_Title {
-            title
-          }
           ... on Page_Pagefields_sections_Flexiblecontent_Richtext {
             richtext
           }
