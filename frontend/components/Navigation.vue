@@ -4,8 +4,8 @@
       <li v-for="menuItem in menu.menuItems?.nodes" :key="menuItem.id">
         <nuxt-link
           v-if="menuItem.uri"
-          class="underline"
           :to="menuItem.uri"
+          class="router-link"
           :class="menuItem.cssClasses.join(' ')"
         >
           {{ menuItem.label }}
@@ -19,8 +19,8 @@
             :key="subMenuItem.id"
           >
             <nuxt-link
-              class="underline"
               :to="subMenuItem.uri"
+              class="router-link"
               :class="subMenuItem.cssClasses.join(' ')"
             >
               {{ subMenuItem.label }}
@@ -62,6 +62,24 @@ watch(locale, async () => {
 </script>
 
 <style lang="postcss" scoped>
+.router-link {
+  text-decoration: underline;
+  text-decoration-thickness: 0.05em;
+  text-underline-offset: 0.1em;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &.router-link-active {
+    @apply no-underline cursor-default;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
 .h1 {
   .sub-nav {
     margin-left: 1.75em;
