@@ -23,7 +23,7 @@ const richtextprocessed = computed(() => {
   }
 
   ul {
-    @apply mb-5 ml-7;
+    @apply mb-6 ml-7;
 
     li {
       @apply mb-2;
