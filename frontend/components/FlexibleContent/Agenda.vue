@@ -42,7 +42,7 @@ const props = defineProps({
   }
 
   @screen md {
-    grid-template-columns: min-content auto;
+    grid-template-columns: max-content auto;
 
     .event-date,
     .event-text {
