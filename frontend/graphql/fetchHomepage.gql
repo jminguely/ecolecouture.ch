@@ -65,6 +65,9 @@ query fetchPage($uri: ID!) {
             testimonials {
               text
               title
+              link {
+                url
+              }
               image {
                 ...MediaItemFragment
               }

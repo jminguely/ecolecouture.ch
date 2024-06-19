@@ -25,8 +25,21 @@
         :class="[testimonials.length > 1 && 'px-14']"
       >
         <div>
+          <a
+            v-if="testimonial.link && testimonial.link.url"
+            :href="testimonial.link.url"
+            target="_blank"
+          >
+            <LazyImg
+              v-if="testimonial.image.mediaDetails.sizes[0]"
+              class="w-full"
+              :class="[`thumb-shape-${$getRandomInt(3)}`]"
+              :alt="testimonial.image.altText"
+              :src="`${testimonial.image.mediaDetails.sizes[0].sourceUrl}`"
+            />
+          </a>
           <LazyImg
-            v-if="testimonial.image.mediaDetails.sizes[0]"
+            v-else-if="testimonial.image.mediaDetails.sizes[0]"
             class="w-full"
             :class="[`thumb-shape-${$getRandomInt(3)}`]"
             :alt="testimonial.image.altText"

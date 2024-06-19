@@ -41,7 +41,8 @@
                     },
                     "placement": "top",
                     "endpoint": 0,
-                    "parent_repeater": "field_64c12a0da3760"
+                    "parent_repeater": "field_64c12a0da3760",
+                    "selected": 0
                 },
                 {
                     "key": "field_64c12a5da3762",
@@ -390,6 +391,24 @@
                                             "mime_types": "",
                                             "preview_size": "thumbnail",
                                             "parent_repeater": "field_64c1274b421bd"
+                                        },
+                                        {
+                                            "key": "field_66736cefe6a88",
+                                            "label": "Link",
+                                            "name": "link",
+                                            "aria-label": "",
+                                            "type": "link",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "show_in_graphql": 1,
+                                            "return_format": "array",
+                                            "parent_repeater": "field_64c1274b421bd"
                                         }
                                     ]
                                 }
@@ -563,7 +582,8 @@
                     },
                     "placement": "top",
                     "endpoint": 0,
-                    "parent_repeater": "field_64c12a0da3760"
+                    "parent_repeater": "field_64c12a0da3760",
+                    "selected": 0
                 },
                 {
                     "key": "field_64c12a19a3761",
@@ -647,5 +667,5 @@
     "graphql_field_name": "pageFields",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1698250864
+    "modified": 1718840568
 }
