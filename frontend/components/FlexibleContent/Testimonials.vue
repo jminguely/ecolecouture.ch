@@ -27,7 +27,7 @@
         <div>
           <a
             v-if="testimonial.link && testimonial.link.url"
-            :href="testimonial.link.url"
+            :href="useNuxtApp().$processCustomURL(testimonial.link.url)"
             target="_blank"
           >
             <LazyImg
