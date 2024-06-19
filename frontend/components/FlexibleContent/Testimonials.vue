@@ -28,7 +28,6 @@
           <a
             v-if="testimonial.link && testimonial.link.url"
             :href="useNuxtApp().$processCustomURL(testimonial.link.url)"
-            target="_blank"
           >
             <LazyImg
               v-if="testimonial.image.mediaDetails.sizes[0]"
@@ -49,6 +48,12 @@
         <div class="md:col-span-2 py-10">
           <h3 class="h2">{{ testimonial.title }}</h3>
           <Richtext :richtext="testimonial.text" />
+          <a
+            v-if="testimonial.link && testimonial.link.url"
+            :href="useNuxtApp().$processCustomURL(testimonial.link.url)"
+          >
+            Plus…
+          </a>
         </div>
       </div>
     </swiper-slide>
