@@ -1,11 +1,11 @@
 <template>
   <div class="gap-3 flex items-start">
-    <Button v-for="(button, i) in buttons" :key="i" :button="button" />
+    <CustomButton v-for="(button, i) in buttons" :key="i" :button="button" />
   </div>
 </template>
 
 <script setup>
-import Button from '@/components/FlexibleContent/Button.vue'
+import CustomButton from '@/components/FlexibleContent/CustomButton.vue'
 
 const props = defineProps({
   buttons: {

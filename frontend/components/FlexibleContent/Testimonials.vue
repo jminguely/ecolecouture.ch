@@ -48,12 +48,14 @@
         <div class="md:col-span-2 py-10">
           <h3 class="h2">{{ testimonial.title }}</h3>
           <Richtext :richtext="testimonial.text" />
-          <a
+          <CustomButton
             v-if="testimonial.link && testimonial.link.url"
             :href="useNuxtApp().$processCustomURL(testimonial.link.url)"
+            class="-mt-1"
+            :target="testimonial.link.target"
           >
             Plus…
-          </a>
+          </CustomButton>
         </div>
       </div>
     </swiper-slide>
@@ -65,6 +67,7 @@ import LazyImg from '@/components/LazyImg.vue'
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import { Pagination } from 'swiper/modules'
 import Richtext from './Richtext.vue'
+import CustomButton from './CustomButton.vue'
 
 // Import Swiper styles
 import 'swiper/css'
@@ -77,6 +80,7 @@ export default {
     LazyImg,
     Richtext,
     Swiper,
+    CustomButton,
     SwiperSlide,
     SliderNextArrow,
     SliderPrevArrow,

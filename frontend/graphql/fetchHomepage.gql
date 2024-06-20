@@ -67,6 +67,7 @@ query fetchPage($uri: ID!) {
               title
               link {
                 url
+                target
               }
               image {
                 ...MediaItemFragment
