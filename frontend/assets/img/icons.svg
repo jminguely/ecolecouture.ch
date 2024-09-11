@@ -3,5 +3,13 @@
   <defs>
     <symbol id="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45.18 37.5"><path fill="currentColor" fill-rule="nonzero" d="M45.18 18.72 26.52 0l-4.98 5.16 10.44 10.08H0v7.2h31.8l-10.26 9.9 4.98 5.16z"/></symbol>
     <symbol id="caret" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.828 14.243"><path fill="none" fill-rule="evenodd" stroke="currentColor" stroke-width="4" d="m21.414 1.414-10 10-10-10"/></symbol>
+    <symbol id="instagram" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+      <path fill="currentColor" fill-rule="evenodd" d="M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12Zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z" clip-rule="evenodd"></path>
+      <path fill="currentColor" d="M18 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2Z"></path>
+      <path fill="currentColor" fill-rule="evenodd" d="M1.654 4.276C1 5.56 1 7.24 1 10.6v2.8c0 3.36 0 5.04.654 6.324a6 6 0 0 0 2.622 2.622C5.56 23 7.24 23 10.6 23h2.8c3.36 0 5.04 0 6.324-.654a6 6 0 0 0 2.622-2.622C23 18.44 23 16.76 23 13.4v-2.8c0-3.36 0-5.04-.654-6.324a6 6 0 0 0-2.622-2.622C18.44 1 16.76 1 13.4 1h-2.8c-3.36 0-5.04 0-6.324.654a6 6 0 0 0-2.622 2.622ZM13.4 3h-2.8c-1.713 0-2.878.002-3.778.075-.877.072-1.325.202-1.638.361a4 4 0 0 0-1.748 1.748c-.16.313-.29.761-.36 1.638C3.001 7.722 3 8.887 3 10.6v2.8c0 1.713.002 2.878.075 3.778.072.877.202 1.325.361 1.638a4 4 0 0 0 1.748 1.748c.313.16.761.29 1.638.36.9.074 2.065.076 3.778.076h2.8c1.713 0 2.878-.002 3.778-.075.877-.072 1.325-.202 1.638-.361a4 4 0 0 0 1.748-1.748c.16-.313.29-.761.36-1.638.074-.9.076-2.065.076-3.778v-2.8c0-1.713-.002-2.878-.075-3.778-.072-.877-.202-1.325-.361-1.638a4 4 0 0 0-1.748-1.748c-.313-.16-.761-.29-1.638-.36C16.278 3.001 15.113 3 13.4 3Z" clip-rule="evenodd"></path>
+    </symbol>
+    <symbol id="facebook" xmlns="http://www.w3.org/2000/svg" viewBox="-5 0 20 20">
+      <path fill="currentColor" fill-rule="evenodd" d="M6.821 20v-9h2.733L10 7H6.821V5.052C6.821 4.022 6.848 3 8.287 3h1.458V.14c0-.043-1.253-.14-2.52-.14C4.58 0 2.924 1.657 2.924 4.7V7H0v4h2.923v9h3.898Z"></path>
+    </symbol>
   </defs>
 </svg>

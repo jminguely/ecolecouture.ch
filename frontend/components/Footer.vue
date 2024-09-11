@@ -12,13 +12,32 @@
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
         <div>
           <p class="mb-5">
-            Derrière-Les-Rempars 5<br />
+            Derrière-Les-Remparts 5<br />
             1700 Fribourg<br />
             <a class="underline" href="mailto:info@ecolecouture.ch">
               info@ecolecouture.ch
             </a>
           </p>
-          <Navigation location="MENU_SOCIAL" />
+          <div class="flex gap-3">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.facebook.com/ecolecouturefribourg"
+            >
+              <svg class="inline-block w-5 h-5">
+                <use href="~/assets/img/icons.svg#instagram"></use>
+              </svg>
+            </a>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.instagram.com/ecoledecouturefribourg/"
+            >
+              <svg class="inline-block w-5 h-5">
+                <use href="~/assets/img/icons.svg#facebook"></use>
+              </svg>
+            </a>
+          </div>
         </div>
 
         <div>
