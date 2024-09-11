@@ -71,9 +71,8 @@
           <div>
             <div class="richtext">
               <h2>{{ $t('homepage.commandes') }}</h2>
-              <p>
-                L’école de couture réalise des commandes pour des clients
-                privés. L’aventure vous tente?
+              <p v-if="data.page.homepageFields.textCommandes">
+                {{ data.page.homepageFields.textCommandes }}
               </p>
             </div>
             <nuxt-link
