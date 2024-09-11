@@ -38,6 +38,11 @@
               </svg>
             </a>
           </div>
+          <img
+            src="~/assets/img/logo-etatfr.svg"
+            alt="État de Fribourg."
+            class="w-28 mt-7"
+          />
         </div>
 
         <div>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-for="gallery in galleries" :key="gallery.id" class="mb-16 mt-32">
+    <div v-for="gallery in galleries" :key="gallery.id" class="my-16">
       <div class="flex justify-between items-baseline mb-8">
         <h2 class="mb-0">{{ gallery.title }}</h2>
         <nuxt-link
