@@ -64,15 +64,11 @@
             </tr>
             <tr>
               <td class="pr-2 opacity-50">Photographies:</td>
-              <td></td>
+              <td>Adrien Pilet</td>
             </tr>
             <tr>
-              <td class="pr-2 opacity-50">Redaction textes:</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class="pr-2 opacity-50">Traduction allemande:</td>
-              <td></td>
+              <td class="pr-2 opacity-50">Redaction:</td>
+              <td>Gaëlle Pizzotti – Rectoverso</td>
             </tr>
           </table>
         </div>
