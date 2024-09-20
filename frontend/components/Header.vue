@@ -12,7 +12,7 @@
       </h1>
     </div>
     <div class="menu-toggle-container">
-      <LangSwitcher :available-translations="availableTranslations" />
+      <!-- <LangSwitcher :available-translations="availableTranslations" /> -->
       <button
         id="menuToggle"
         class="button button-shape-1 bg-electricblue text-white transition-colors pointer-events-auto"
