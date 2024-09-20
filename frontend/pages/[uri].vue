@@ -14,26 +14,37 @@
 
 <script setup>
 import fetchPage from '~/graphql/fetchPage.gql'
+import { useRouter } from 'vue-router'
 
 const emit = defineEmits(['updateTranslations'])
 
 const route = useRoute()
+const router = useRouter()
 
 const variables = { uri: route.params.uri }
 
-const { data } = await useAsyncQuery(fetchPage, variables)
+try {
+  const { data } = await useAsyncQuery(fetchPage, variables)
 
-useHead({
-  title: data.value.page.title,
-  bodyAttrs: {
-    class: [
-      data.value.page.pageSidebarFields.theme &&
-        `section theme-${data.value.page.pageSidebarFields.theme} bg-${data.value.page.pageSidebarFields.theme}`,
-    ],
-  },
-})
+  if (!data || !data.value || !data.value.page) {
+    throw new Error('Page data is missing')
+  }
 
-if (data?.value?.page?.translations?.length > 0) {
-  emit('updateTranslations', data.value.page.translations)
+  useHead({
+    title: data.value.page.title,
+    bodyAttrs: {
+      class: [
+        data.value.page.pageSidebarFields.theme &&
+          `section theme-${data.value.page.pageSidebarFields.theme} bg-${data.value.page.pageSidebarFields.theme}`,
+      ],
+    },
+  })
+
+  if (data.value.page.translations?.length > 0) {
+    emit('updateTranslations', data.value.page.translations)
+  }
+} catch (error) {
+  // Cath the error and redirect to the error page
+  router.push('/accueil')
 }
 </script>
