@@ -14,12 +14,12 @@
     <div class="max-w-lg mx-auto px-8 py-60">
       <h2 class="h1 lg:w-2/3">Erreur 404</h2>
       <p>La page que vous cherchez d'atteindre n'existe plus.</p>
-      <nuxt-link
+      <a
         class="mt-5 button button-shape-1 bg-electricblue text-white hover:bg-electricblue-darker active:bg-electricblue-lighter"
         to="/"
       >
         Retourner à l'accueil
-      </nuxt-link>
+      </a>
     </div>
   </div>
 </template>
