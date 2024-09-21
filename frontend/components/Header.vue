@@ -2,7 +2,10 @@
   <div>
     <div class="logo-container p-8">
       <h1 class="inline-block">
-        <nuxt-link :to="header.homeUrl || '/'" class="pointer-events-auto">
+        <nuxt-link
+          :to="header.homeUrl || '/accueil'"
+          class="pointer-events-auto"
+        >
           <img
             class="w-32 sm:w-48 header-logo"
             src="../assets/img/logo-ecolecouture.png"
