@@ -10,6 +10,18 @@
       :class="[i > 0 && !section.fullwidth && 'pt-12']"
     />
   </div>
+  <div v-else>
+    <div class="max-w-lg mx-auto px-8 py-60">
+      <h2 class="h1 lg:w-2/3">Erreur 404</h2>
+      <p>La page que vous cherchez d'atteindre n'existe plus.</p>
+      <nuxt-link
+        class="mt-5 button button-shape-1 bg-electricblue text-white hover:bg-electricblue-darker active:bg-electricblue-lighter"
+        to="/"
+      >
+        Retourner à l'accueil
+      </nuxt-link>
+    </div>
+  </div>
 </template>
 
 <script setup>
@@ -24,10 +36,10 @@ const variables = { uri: route.params.uri }
 const { data } = await useAsyncQuery(fetchPage, variables)
 
 useHead({
-  title: data.value.page.title,
+  title: data?.value?.page?.title ? data?.value?.page?.title : 'Erreur 404',
   bodyAttrs: {
     class: [
-      data.value.page.pageSidebarFields.theme &&
+      data?.value?.page?.pageSidebarFields.theme &&
         `section theme-${data.value.page.pageSidebarFields.theme} bg-${data.value.page.pageSidebarFields.theme}`,
     ],
   },
