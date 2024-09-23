@@ -44,6 +44,8 @@ const variables = { uri: route.params.uri }
 
 const { data } = await useAsyncQuery(fetchPage, variables)
 
+console.log(variables)
+
 useHead({
   title: data?.value?.page?.title ? data?.value?.page?.title : 'Erreur 404',
   bodyAttrs: {
