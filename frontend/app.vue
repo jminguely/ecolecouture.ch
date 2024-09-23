@@ -39,7 +39,7 @@ useHead({
     {
       hid: 'description',
       name: 'description',
-      content: 'Description of the page',
+      content: "Site web de l'école de couture de Fribourg",
     },
   ],
 })

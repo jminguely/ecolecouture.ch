@@ -43,19 +43,11 @@ watch(locale, async () => {
 })
 
 useHead({
-  titleTemplate: (title) => `${title} - ecolecouture.ch`,
+  titleTemplate: 'Erreur 404 - ecolecouture.ch',
   viewport: 'width=device-width, initial-scale=1, maximum-scale=1',
   charset: 'utf-8',
   htmlAttrs: {
     class: 'bg-white text-black',
   },
-
-  meta: [
-    {
-      hid: 'description',
-      name: 'description',
-      content: 'Description of the page',
-    },
-  ],
 })
 </script>
