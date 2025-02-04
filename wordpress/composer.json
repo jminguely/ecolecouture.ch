@@ -54,8 +54,8 @@
     "roots/wp-password-bcrypt": "1.1.0",
     "wpackagist-plugin/wp-graphql": "^1.14",
     "wp-graphql/wp-graphql-acf": "^0.6.1",
-    "wpackagist-plugin/polylang": "^3.4",
-    "valu/wp-graphql-polylang": "^0.6.0",
+    "wpackagist-plugin/polylang": "^3.6",
+    "valu/wp-graphql-polylang": "^0.7.0",
     "wpackagist-plugin/acf-options-for-polylang": "^1.1",
     "wpengine/advanced-custom-fields-pro": "^6.2",
     "wpackagist-plugin/classic-editor": "^1.6"
