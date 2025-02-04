@@ -10,7 +10,10 @@
     "close": "X"
   },
   "footer": {
-    "espaceeleves": "Menu",
-    "espaceelevesurl": "https://google.fr"
+    "designConcept": "Design et concept",
+    "supervision": "Encadrement",
+    "development": "Développement",
+    "photography": "Photographies",
+    "writing": "Rédaction"
   }
 }

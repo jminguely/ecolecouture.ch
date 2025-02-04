@@ -8,5 +8,12 @@
   "navigation": {
     "open": "Menu",
     "close": "X"
+  },
+  "footer": {
+    "designConcept": "Design und Konzept",
+    "supervision": "Betreuung",
+    "development": "Entwicklung",
+    "photography": "Fotografien",
+    "writing": "Redaktion"
   }
 }
