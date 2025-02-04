@@ -23,7 +23,7 @@ export default defineNuxtConfig({
     defaultLocale: 'FR',
     locales: [
       { code: 'FR', iso: 'fr-CH', locale: 'fr_CH', homeUrl: '/accueil' },
-      { code: 'DE', iso: 'de-CH', locale: 'de_CH', homeUrl: '/de/wilkommen' },
+      { code: 'DE', iso: 'de-CH', locale: 'de_CH', homeUrl: '/de/startseite' },
     ],
   },
 
@@ -55,6 +55,6 @@ export default defineNuxtConfig({
 
   routeRules: {
     '/': { redirect: '/accueil' },
-    '/de': { redirect: '/de/wilkommen' },
+    '/de': { redirect: '/de/startseite' },
   },
 })
