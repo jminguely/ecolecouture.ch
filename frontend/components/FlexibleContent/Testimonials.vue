@@ -54,7 +54,7 @@
             class="underline -mt-2"
             :target="testimonial.link.target"
           >
-            Plus…
+            {{ $t('plus') }}
           </a>
         </div>
       </div>
