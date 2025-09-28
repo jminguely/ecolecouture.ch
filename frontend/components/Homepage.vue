@@ -16,12 +16,7 @@
         <span class="font-huge text-electricblue z-10">de Couture</span>
       </div>
     </div>
-    <Section
-      v-for="(section, i) in data.page.pageFields.sections"
-      :key="i"
-      :content="section"
-      :class="[i > 0 && !section.fullwidth && 'pt-12']"
-    />
+
     <section class="bg-red theme-red">
       <div class="max-w-lg mx-auto pt-16 p-8">
         <div
@@ -91,6 +86,12 @@
         </div>
       </div>
     </section>
+    <Section
+      v-for="(section, i) in data.page.pageFields.sections"
+      :key="i"
+      :content="section"
+      :class="[i > 0 && !section.fullwidth && 'pt-12']"
+    />
   </div>
 </template>
 
