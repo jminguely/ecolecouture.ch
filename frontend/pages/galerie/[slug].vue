@@ -33,12 +33,14 @@ const emit = defineEmits(['updateTranslations'])
 
 const route = useRoute()
 
-const variables = { slug: route.params.slug }
+const variables = computed(() => ({ slug: route.params.slug }))
 
-const { data } = await useAsyncQuery(fetchGallery, variables)
+const { data } = await useTimedAsyncQuery(fetchGallery, variables, {
+  timeoutMs: 8000,
+})
 
 useHead({
-  title: data.value.galerie.title,
+  title: data.value?.galerie?.title || 'Galerie',
 })
 
 if (data?.value?.galerie?.translations?.length > 0) {

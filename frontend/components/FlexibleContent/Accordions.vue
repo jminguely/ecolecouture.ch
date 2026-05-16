@@ -33,11 +33,12 @@ const props = defineProps({
 })
 
 const accordionsList = computed(() => {
-  const accordionsList = props.accordions.map((accordion) => {
-    accordion.expanded = false
-    return accordion
+  return props.accordions.map((accordion) => {
+    return {
+      ...accordion,
+      expanded: false,
+    }
   })
-  return accordionsList
 })
 </script>
 

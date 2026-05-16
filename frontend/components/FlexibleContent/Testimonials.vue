@@ -11,7 +11,6 @@
       '--swiper-pagination-color': 'currentColor',
       '--swiper-pagination-bottom': '20px',
     }"
-    @swiper="onSwiper"
   >
     <slider-prev-arrow class="left-0" />
     <slider-next-arrow class="right-0" />
@@ -90,11 +89,7 @@ export default {
     },
   },
   setup() {
-    const onSwiper = (swiper) => {
-      console.log(swiper)
-    }
     return {
-      onSwiper,
       modules: [Pagination],
     }
   },

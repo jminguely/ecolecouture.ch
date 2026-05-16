@@ -93,6 +93,16 @@
       :class="[i > 0 && !section.fullwidth && 'pt-12']"
     />
   </div>
+  <div v-else class="max-w-lg mx-auto px-8 py-60">
+    <h2 class="h1 lg:w-2/3">Contenu indisponible</h2>
+    <p>Le chargement de la page d'accueil a échoué temporairement.</p>
+    <nuxt-link
+      class="mt-5 button button-shape-1 bg-electricblue text-white hover:bg-electricblue-darker active:bg-electricblue-lighter"
+      :to="homeUrl"
+    >
+      Réessayer
+    </nuxt-link>
+  </div>
 </template>
 
 <script setup>
@@ -107,16 +117,25 @@ const props = defineProps({
 })
 
 const emit = defineEmits(['updateTranslations'])
+const { locales, locale } = useI18n()
+
+const homeUrl = computed(() => {
+  return (
+    locales.value.find((i) => i.code === locale.value)?.homeUrl || '/accueil'
+  )
+})
 
 const variables = { uri: props.slug }
 
-const { data } = await useAsyncQuery(fetchPage, variables)
+const { data } = await useTimedAsyncQuery(fetchPage, variables, {
+  timeoutMs: 6000,
+})
 
 useHead({
-  title: data.value.page.title,
+  title: data.value?.page?.title || 'École de Couture',
   bodyAttrs: {
     class: [
-      data.value.page.pageSidebarFields.theme &&
+      data.value?.page?.pageSidebarFields?.theme &&
         `section bg-${data.value.page.pageSidebarFields.theme}`,
     ],
   },

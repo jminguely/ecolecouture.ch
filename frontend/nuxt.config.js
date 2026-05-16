@@ -31,6 +31,16 @@ export default defineNuxtConfig({
     clients: {
       default: {
         httpEndpoint: process.env.API_URL,
+        defaultOptions: {
+          query: {
+            fetchPolicy: 'no-cache',
+            errorPolicy: 'all',
+          },
+          watchQuery: {
+            fetchPolicy: 'no-cache',
+            errorPolicy: 'all',
+          },
+        },
       },
     },
   },

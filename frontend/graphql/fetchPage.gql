@@ -1,8 +1,6 @@
 query fetchPage($uri: ID!) {
   page(id: $uri, idType: URI) {
-    id
     title
-    content
     pageSidebarFields {
       theme
     }
@@ -55,11 +53,9 @@ query fetchPage($uri: ID!) {
             }
           }
           ... on Page_Pagefields_sections_Flexiblecontent_Galerie {
-            fieldGroupName
             gallery {
               ... on Galerie {
                 id
-                slug
                 uri
                 title
                 content
@@ -77,14 +73,11 @@ query fetchPage($uri: ID!) {
             }
           }
           ... on Page_Pagefields_sections_Flexiblecontent_Video {
-            fieldGroupName
             video
           }
           ... on Page_Pagefields_sections_Flexiblecontent_Agenda {
-            fieldGroupName
             event {
               date
-              fieldGroupName
               richtext
             }
           }
@@ -92,10 +85,8 @@ query fetchPage($uri: ID!) {
       }
     }
     translations {
-      id
       uri
       language {
-        id
         code
         locale
       }

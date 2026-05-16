@@ -16,7 +16,7 @@
       <p>La page que vous cherchez d'atteindre n'existe plus.</p>
       <nuxt-link
         class="mt-5 button button-shape-1 bg-electricblue text-white hover:bg-electricblue-darker active:bg-electricblue-lighter"
-        :to="header.homeUrl || '/accueil'"
+        :to="homeUrl"
       >
         Retourner à l'accueil
       </nuxt-link>
@@ -30,27 +30,25 @@ import fetchPage from '~/graphql/fetchPage.gql'
 const emit = defineEmits(['updateTranslations'])
 const { locales, locale } = useI18n()
 
-const header = reactive({
-  homeUrl: locales.value.find((i) => i.code === locale.value).homeUrl,
-})
-
-watch(locale, async () => {
-  header.homeUrl = locales.value.find((i) => i.code === locale.value).homeUrl
+const homeUrl = computed(() => {
+  return (
+    locales.value.find((i) => i.code === locale.value)?.homeUrl || '/accueil'
+  )
 })
 
 const route = useRoute()
 
-const variables = { uri: route.params.uri }
+const variables = computed(() => ({ uri: route.params.uri }))
 
-const { data } = await useAsyncQuery(fetchPage, variables)
-
-console.log(variables)
+const { data } = await useTimedAsyncQuery(fetchPage, variables, {
+  timeoutMs: 8000,
+})
 
 useHead({
-  title: data?.value?.page?.title ? data?.value?.page?.title : 'Erreur 404',
+  title: data?.value?.page?.title || 'Erreur 404',
   bodyAttrs: {
     class: [
-      data?.value?.page?.pageSidebarFields.theme &&
+      data?.value?.page?.pageSidebarFields?.theme &&
         `section theme-${data.value.page.pageSidebarFields.theme} bg-${data.value.page.pageSidebarFields.theme}`,
     ],
   },

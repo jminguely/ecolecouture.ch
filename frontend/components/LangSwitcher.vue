@@ -26,20 +26,19 @@ const props = defineProps({
 const { locales, locale } = useI18n()
 
 const navLocales = computed(() => {
-  return locales.value.filter((i) => {
-    i.url = i.homeUrl
+  return locales.value.map((i) => {
+    const item = { ...i, url: i.homeUrl }
     if (props.availableTranslations.length > 0) {
-      props.availableTranslations.filter((j) => {
-        if (i.locale === j.language.locale) {
-          i.url = j.uri
+      props.availableTranslations.forEach((j) => {
+        if (item.locale === j.language.locale) {
+          item.url = j.uri
         }
-        return j
       })
     }
-    if (i.code === locale.value) {
-      i.url = false
+    if (item.code === locale.value) {
+      item.url = false
     }
-    return i
+    return item
   })
 })
 </script>

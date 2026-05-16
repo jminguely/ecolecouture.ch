@@ -52,9 +52,7 @@
           "
           :events="row.event"
         />
-        <div v-else>
-          <pre>{{ row }}</pre>
-        </div>
+        <div v-else class="sr-only">Unsupported content block</div>
       </div>
     </div>
   </div>

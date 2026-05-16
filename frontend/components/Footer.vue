@@ -1,7 +1,7 @@
 <template>
   <footer class="footer mt-auto p-8 bg-green text-white text-sm">
     <div class="max-w-xl mx-auto">
-      <nuxt-link :to="header.homeUrl || '/'">
+      <nuxt-link :to="headerHomeUrl">
         <img
           class="w-32 sm:w-48 brightness-0 invert mb-10"
           src="../assets/img/logo-ecolecouture.png"
@@ -80,11 +80,7 @@
 <script setup>
 const { locales, locale } = useI18n()
 
-const header = reactive({
-  homeUrl: locales.value.find((i) => i.code === locale.value).homeUrl,
-})
-
-watch(locale, async () => {
-  header.homeUrl = locales.value.find((i) => i.code === locale.value).homeUrl
+const headerHomeUrl = computed(() => {
+  return locales.value.find((i) => i.code === locale.value)?.homeUrl || '/'
 })
 </script>

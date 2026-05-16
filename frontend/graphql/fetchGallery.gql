@@ -15,10 +15,8 @@ query fetchGallery($slug: ID!) {
       }
     }
     translations {
-      id
       uri
       language {
-        id
         code
         locale
       }

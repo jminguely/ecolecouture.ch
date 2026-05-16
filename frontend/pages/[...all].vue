@@ -5,7 +5,7 @@
       <p>La page que vous cherchez d'atteindre n'existe plus.</p>
       <nuxt-link
         class="mt-5 button button-shape-1 bg-electricblue text-white hover:bg-electricblue-darker active:bg-electricblue-lighter"
-        :to="header.homeUrl || '/accueil'"
+        :to="headerHomeUrl"
       >
         Retourner à l'accueil
       </nuxt-link>
@@ -16,12 +16,10 @@
 <script setup>
 const { locales, locale } = useI18n()
 
-const header = reactive({
-  homeUrl: locales.value.find((i) => i.code === locale.value).homeUrl,
-})
-
-watch(locale, async () => {
-  header.homeUrl = locales.value.find((i) => i.code === locale.value).homeUrl
+const headerHomeUrl = computed(() => {
+  return (
+    locales.value.find((i) => i.code === locale.value)?.homeUrl || '/accueil'
+  )
 })
 
 useHead({

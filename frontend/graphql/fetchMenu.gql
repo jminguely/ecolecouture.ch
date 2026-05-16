@@ -3,13 +3,11 @@ query fetchMenu($lang: LanguageCodeFilterEnum, $location: MenuLocationEnum) {
     where: { language: $lang, location: $location, parentDatabaseId: 0 }
   ) {
     nodes {
-      id
       label
       uri
       cssClasses
       childItems {
         nodes {
-          id
           label
           uri
           cssClasses

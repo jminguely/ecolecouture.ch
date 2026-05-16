@@ -1,7 +1,7 @@
 <template>
   <nav v-bind="$attrs">
     <ul class="text-white">
-      <li v-for="menuItem in menu.menuItems?.nodes" :key="menuItem.id">
+      <li v-for="menuItem in menuItems" :key="menuItem.label + menuItem.uri">
         <nuxt-link
           v-if="menuItem.uri"
           :to="menuItem.uri"
@@ -16,7 +16,7 @@
         <ul v-if="menuItem.childItems?.nodes.length" class="sub-nav">
           <li
             v-for="subMenuItem in menuItem.childItems?.nodes"
-            :key="subMenuItem.id"
+            :key="subMenuItem.label + subMenuItem.uri"
           >
             <nuxt-link
               :to="subMenuItem.uri"
@@ -44,21 +44,21 @@ const props = defineProps({
 
 const { locale } = useI18n()
 
-const variables = { lang: locale.value, location: props.location }
+const variables = computed(() => ({
+  lang: locale.value,
+  location: props.location,
+}))
 
-const { data } = await useAsyncQuery(fetchMenu, variables)
-
-const menu = reactive({
-  menuItems: data.value.menuItems,
+const { data, refresh } = await useTimedAsyncQuery(fetchMenu, variables, {
+  timeoutMs: 6000,
+  fallbackData: { menuItems: { nodes: [] } },
 })
 
-watch(locale, async () => {
-  setTimeout(async () => {
-    const variables = { lang: locale.value, location: props.location }
-    const { data } = await useAsyncQuery(fetchMenu, variables)
-    menu.menuItems = data.value.menuItems
-  }, 1000)
+watch(locale, () => {
+  refresh()
 })
+
+const menuItems = computed(() => data.value?.menuItems?.nodes || [])
 </script>
 
 <style lang="postcss" scoped>

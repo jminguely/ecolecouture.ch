@@ -14,7 +14,6 @@
         '--swiper-pagination-color': 'currentColor',
         '--swiper-pagination-bottom': '0',
       }"
-      @swiper="onSwiper"
     >
       <slider-prev-arrow class="left-0" />
       <slider-next-arrow class="right-0" />
@@ -67,7 +66,9 @@ export default {
 .swiper-slide {
   transform: scale(0.9);
   opacity: 0;
-  transition: transform 0.3s ease-in-out, opacity 0.15s;
+  transition:
+    transform 0.3s ease-in-out,
+    opacity 0.15s;
 }
 
 .swiper-slide-prev {

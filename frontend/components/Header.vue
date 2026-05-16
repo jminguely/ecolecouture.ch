@@ -2,10 +2,7 @@
   <div>
     <div class="logo-container p-8">
       <h1 class="inline-block">
-        <nuxt-link
-          :to="header.homeUrl || '/accueil'"
-          class="pointer-events-auto"
-        >
+        <nuxt-link :to="headerHomeUrl" class="pointer-events-auto">
           <img
             class="w-32 sm:w-48 header-logo"
             src="../assets/img/logo-ecolecouture.png"
@@ -27,7 +24,7 @@
     </div>
     <div class="nav-container bg-red" :class="[menuOpen && 'nav-open']">
       <div class="logo-container">
-        <nuxt-link :to="header.homeUrl || '/'">
+        <nuxt-link :to="headerHomeUrl">
           <img
             class="brightness-0 invert w-32 sm:w-48 m-8"
             src="../assets/img/logo-ecolecouture.png"
@@ -45,12 +42,10 @@
 <script setup>
 const { locales, locale } = useI18n()
 
-const header = reactive({
-  homeUrl: locales.value.find((i) => i.code === locale.value).homeUrl,
-})
-
-watch(locale, async () => {
-  header.homeUrl = locales.value.find((i) => i.code === locale.value).homeUrl
+const headerHomeUrl = computed(() => {
+  return (
+    locales.value.find((i) => i.code === locale.value)?.homeUrl || '/accueil'
+  )
 })
 
 const props = defineProps({
@@ -67,12 +62,10 @@ const route = useRoute()
 
 watch(
   route,
-  (value) => {
-    setTimeout(() => {
-      emit('updateMenuOpen', false)
-    }, 300)
+  () => {
+    emit('updateMenuOpen', false)
   },
-  { deep: true, immediate: true }
+  { deep: true, immediate: true },
 )
 </script>
 
