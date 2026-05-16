@@ -33,7 +33,7 @@ const emit = defineEmits(['updateTranslations'])
 
 const route = useRoute()
 
-const variables = computed(() => ({ slug: route.params.slug }))
+const variables = reactive({ slug: route.params.slug })
 
 const { data } = await useTimedAsyncQuery(fetchGallery, variables, {
   timeoutMs: 8000,

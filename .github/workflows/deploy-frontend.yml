@@ -28,6 +28,7 @@ jobs:
         run: yarn && yarn build
         env:
           API_URL: ${{ vars.API_URL }}
+          NODE_OPTIONS: --max-old-space-size=768
 
       - name: 🚀 Ship the whole thin
         id: deploy

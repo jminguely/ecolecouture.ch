@@ -38,7 +38,7 @@ const homeUrl = computed(() => {
 
 const route = useRoute()
 
-const variables = computed(() => ({ uri: route.params.uri }))
+const variables = reactive({ uri: route.params.uri })
 
 const { data } = await useTimedAsyncQuery(fetchPage, variables, {
   timeoutMs: 8000,

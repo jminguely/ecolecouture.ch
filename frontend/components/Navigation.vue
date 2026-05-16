@@ -44,10 +44,10 @@ const props = defineProps({
 
 const { locale } = useI18n()
 
-const variables = computed(() => ({
+const variables = reactive({
   lang: locale.value,
   location: props.location,
-}))
+})
 
 const { data, refresh } = await useTimedAsyncQuery(fetchMenu, variables, {
   timeoutMs: 6000,
@@ -55,6 +55,7 @@ const { data, refresh } = await useTimedAsyncQuery(fetchMenu, variables, {
 })
 
 watch(locale, () => {
+  variables.lang = locale.value
   refresh()
 })
 
