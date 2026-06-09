@@ -4,6 +4,7 @@ export default defineNuxtConfig({
   ssr: false,
 
   runtimeConfig: {
+    apiUrl: process.env.API_URL,
     public: {
       wp: process.env.WP_URL || 'https://api.ecolecouture.ch/',
     },
@@ -31,6 +32,7 @@ export default defineNuxtConfig({
     clients: {
       default: {
         httpEndpoint: process.env.API_URL,
+        browserHttpEndpoint: '/api/graphql',
         defaultOptions: {
           query: {
             fetchPolicy: 'no-cache',
