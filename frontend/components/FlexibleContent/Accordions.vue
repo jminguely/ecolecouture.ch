@@ -1,18 +1,18 @@
 <template>
   <div>
-    <div v-for="(accordion, i) in accordionsList" :key="i" class="mb-3">
-      <button class="h3" @click="accordion.expanded = !accordion.expanded">
+    <div v-for="(accordion, i) in accordions" :key="i" class="mb-3">
+      <button class="h3" @click="toggle(i)">
         {{ accordion.title }}
         <span
           class="relative inline-block left-1 origin-center transition-transform"
-          :class="[accordion.expanded && '-rotate-180']"
+          :class="[expandedState[i] && '-rotate-180']"
         >
           <svg class="icon w-3 h-3 relative top-0.5">
             <use href="~/assets/img/icons.svg#caret"></use>
           </svg>
         </span>
       </button>
-      <VueAccordion :expanded="accordion.expanded">
+      <VueAccordion :expanded="!!expandedState[i]">
         <div class="pb-1 pl-14">
           <Richtext :richtext="accordion.richtext" />
         </div>
@@ -22,6 +22,7 @@
 </template>
 
 <script setup>
+import { reactive } from 'vue'
 import { VueAccordion } from '@ztrehagem/vue-accordion'
 import Richtext from './Richtext.vue'
 
@@ -32,14 +33,11 @@ const props = defineProps({
   },
 })
 
-const accordionsList = computed(() => {
-  return props.accordions.map((accordion) => {
-    return {
-      ...accordion,
-      expanded: false,
-    }
-  })
-})
+const expandedState = reactive({})
+
+const toggle = (index) => {
+  expandedState[index] = !expandedState[index]
+}
 </script>
 
 <style scoped>
