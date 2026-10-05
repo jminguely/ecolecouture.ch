@@ -12,7 +12,7 @@ export default defineNuxtConfig({
 
   modules: [
     '@nuxtjs/apollo',
-    '@nuxt/image-edge',
+    '@nuxt/image',
     '@nuxtjs/i18n',
     '@pinia/nuxt',
   ],
