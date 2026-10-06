@@ -1,6 +1,7 @@
 import eslintPlugin from 'vite-plugin-eslint'
 
 export default defineNuxtConfig({
+  compatibilityDate: '2026-10-07',
   ssr: false,
 
   runtimeConfig: {
@@ -20,11 +21,13 @@ export default defineNuxtConfig({
   i18n: {
     vueI18n: '../i18n.config.js',
     detectBrowserLanguage: false,
+    langDir: '',
+    lazy: true,
     locale: 'FR',
     defaultLocale: 'FR',
     locales: [
-      { code: 'FR', iso: 'fr-CH', locale: 'fr_CH', homeUrl: '/accueil' },
-      { code: 'DE', iso: 'de-CH', locale: 'de_CH', homeUrl: '/de/startseite' },
+      { code: 'FR', iso: 'fr-CH', locale: 'fr_CH', file: 'fr.json', homeUrl: '/accueil' },
+      { code: 'DE', iso: 'de-CH', locale: 'de_CH', file: 'de.json', homeUrl: '/de/startseite' },
     ],
   },
 
