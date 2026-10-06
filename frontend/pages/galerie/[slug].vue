@@ -11,7 +11,7 @@
         :key="image.id"
         class="mb-5"
       >
-        <LazyImg
+        <AppImg
           v-if="image.mediaDetails.sizes[0]"
           class="w-full max-h-screen object-contain object-left"
           :alt="image.altText"
@@ -24,7 +24,7 @@
 </template>
 
 <script setup>
-import LazyImg from '@/components/LazyImg.vue'
+import AppImg from '@/components/AppImg.vue'
 import Richtext from '@/components/FlexibleContent/Richtext.vue'
 
 import fetchGallery from '~/graphql/fetchGallery.gql'

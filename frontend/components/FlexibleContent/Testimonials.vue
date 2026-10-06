@@ -28,7 +28,7 @@
             v-if="testimonial.link && testimonial.link.url"
             :href="useNuxtApp().$processCustomURL(testimonial.link.url)"
           >
-            <LazyImg
+            <AppImg
               v-if="testimonial.image.mediaDetails.sizes[0]"
               class="w-full"
               :class="[`thumb-shape-${$getRandomInt(3)}`]"
@@ -36,7 +36,7 @@
               :src="`${testimonial.image.mediaDetails.sizes[0].sourceUrl}`"
             />
           </a>
-          <LazyImg
+          <AppImg
             v-else-if="testimonial.image.mediaDetails.sizes[0]"
             class="w-full"
             :class="[`thumb-shape-${$getRandomInt(3)}`]"
@@ -62,7 +62,7 @@
 </template>
 
 <script>
-import LazyImg from '@/components/LazyImg.vue'
+import AppImg from '@/components/AppImg.vue'
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import { Pagination } from 'swiper/modules'
 import Richtext from './Richtext.vue'
@@ -75,7 +75,7 @@ import SliderPrevArrow from './SliderPrevArrow.vue'
 
 export default {
   components: {
-    LazyImg,
+    AppImg,
     Richtext,
     Swiper,
     SwiperSlide,

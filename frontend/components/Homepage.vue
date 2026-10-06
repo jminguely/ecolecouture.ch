@@ -1,7 +1,7 @@
 <template>
   <div v-if="data?.page">
     <div class="max-w-xl mx-auto px-8 pt-32 sm:pt-48 pb-8 relative">
-      <LazyImg
+      <AppImg
         v-if="data.page.homepageFields.imageLanding?.mediaDetails?.sizes[0]"
         class="landing-img thumb-shape-4"
         :alt="data.page.homepageFields.imageLanding.altText"
@@ -23,7 +23,7 @@
           class="flex flex-col md:flex-row gap-10 md:items-center justify-betwee clear-both"
         >
           <div class="md:order-1 md:w-1/3">
-            <LazyImg
+            <AppImg
               v-if="
                 data.page.homepageFields.imageFormations?.mediaDetails?.sizes[0]
               "
@@ -60,7 +60,7 @@
           class="flex flex-col md:flex-row gap-10 md:items-center justify-between"
         >
           <div class="md:w-1/3">
-            <LazyImg
+            <AppImg
               v-if="
                 data.page.homepageFields.imageCommandes?.mediaDetails?.sizes[0]
               "
@@ -107,7 +107,7 @@
 
 <script setup>
 import fetchPage from '~/graphql/fetchHomepage.gql'
-import LazyImg from '@/components/LazyImg.vue'
+import AppImg from '@/components/AppImg.vue'
 
 const props = defineProps({
   slug: {

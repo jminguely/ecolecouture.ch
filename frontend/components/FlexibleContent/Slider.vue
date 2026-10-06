@@ -21,7 +21,7 @@
     <slider-prev-arrow class="left-5" />
     <slider-next-arrow class="right-5" />
     <swiper-slide v-for="(image, i) in images" :key="i" class="mb-3">
-      <LazyImg
+      <AppImg
         v-if="image.mediaDetails.sizes[0]"
         class="w-full"
         :alt="image.altText"
@@ -32,7 +32,7 @@
 </template>
 
 <script>
-import LazyImg from '@/components/LazyImg.vue'
+import AppImg from '@/components/AppImg.vue'
 import SliderNextArrow from './SliderNextArrow'
 import SliderPrevArrow from './SliderPrevArrow'
 
@@ -44,7 +44,7 @@ import 'swiper/css/pagination'
 
 export default {
   components: {
-    LazyImg,
+    AppImg,
     Swiper,
     SwiperSlide,
     SliderNextArrow,
