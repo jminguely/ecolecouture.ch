@@ -6,7 +6,7 @@
     @click="swiper.slideNext()"
   >
     <svg class="icon w-7 h-7">
-      <use href="~/assets/img/icons.svg#arrow"></use>
+      <use href="/icons.svg#arrow"></use>
     </svg>
   </button>
 </template>

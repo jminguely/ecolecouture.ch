@@ -8,7 +8,7 @@
           :class="[expandedState[i] && '-rotate-180']"
         >
           <svg class="icon w-3 h-3 relative top-0.5">
-            <use href="~/assets/img/icons.svg#caret"></use>
+            <use href="/icons.svg#caret"></use>
           </svg>
         </span>
       </button>

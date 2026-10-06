@@ -25,7 +25,7 @@
               href="https://www.instagram.com/ecoledecouturefribourg/"
             >
               <svg class="inline-block w-5 h-5">
-                <use href="~/assets/img/icons.svg#instagram"></use>
+                <use href="/icons.svg#instagram"></use>
               </svg>
             </a>
             <a
@@ -34,7 +34,7 @@
               href="https://www.facebook.com/ecolecouturefribourg"
             >
               <svg class="inline-block w-5 h-5">
-                <use href="~/assets/img/icons.svg#facebook"></use>
+                <use href="/icons.svg#facebook"></use>
               </svg>
             </a>
           </div>
@@ -52,7 +52,9 @@
           <table class="gap-x-2">
             <tbody>
               <tr>
-                <td class="pr-2 opacity-50">{{ $t('footer.designConcept') }}:</td>
+                <td class="pr-2 opacity-50">
+                  {{ $t('footer.designConcept') }}:
+                </td>
                 <td>eikonlab | Adèle Brodard, Samuel Bouverat</td>
               </tr>
               <tr>
