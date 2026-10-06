@@ -50,26 +50,28 @@
         </div>
         <div class="sm:col-span-2 lg:col-span-2">
           <table class="gap-x-2">
-            <tr>
-              <td class="pr-2 opacity-50">{{ $t('footer.designConcept') }}:</td>
-              <td>eikonlab | Adèle Brodard, Samuel Bouverat</td>
-            </tr>
-            <tr>
-              <td class="pr-2 opacity-50">{{ $t('footer.supervision') }}:</td>
-              <td>Martial Mingam, Ann Griffin, Julien Minguely</td>
-            </tr>
-            <tr>
-              <td class="pr-2 opacity-50">{{ $t('footer.development') }}:</td>
-              <td>Julien Minguely</td>
-            </tr>
-            <tr>
-              <td class="pr-2 opacity-50">{{ $t('footer.photography') }}:</td>
-              <td>Adrien Pilet</td>
-            </tr>
-            <tr>
-              <td class="pr-2 opacity-50">{{ $t('footer.writing') }}:</td>
-              <td>Gaëlle Pizzotti – Rectoverso</td>
-            </tr>
+            <tbody>
+              <tr>
+                <td class="pr-2 opacity-50">{{ $t('footer.designConcept') }}:</td>
+                <td>eikonlab | Adèle Brodard, Samuel Bouverat</td>
+              </tr>
+              <tr>
+                <td class="pr-2 opacity-50">{{ $t('footer.supervision') }}:</td>
+                <td>Martial Mingam, Ann Griffin, Julien Minguely</td>
+              </tr>
+              <tr>
+                <td class="pr-2 opacity-50">{{ $t('footer.development') }}:</td>
+                <td>Julien Minguely</td>
+              </tr>
+              <tr>
+                <td class="pr-2 opacity-50">{{ $t('footer.photography') }}:</td>
+                <td>Adrien Pilet</td>
+              </tr>
+              <tr>
+                <td class="pr-2 opacity-50">{{ $t('footer.writing') }}:</td>
+                <td>Gaëlle Pizzotti – Rectoverso</td>
+              </tr>
+            </tbody>
           </table>
         </div>
       </div>
